@@ -91,7 +91,7 @@ if ( ! function_exists( 'register_sidebar' ) ) :
 	));
 endif;
 </code>
-После создания Sidebar нужно их вывести в теме в нужном месте вставляем такой код
+После создания Sidebar нужно их вывести в теме. Таким вот кодом представленым ниже :
 <code>
 ( ! function_exists( 'register_sidebar' ) ) :
 dynamic_sidebar( 'sidebar-Top-myTheme' );
