@@ -101,11 +101,11 @@ endif;
 
 == Screenshots ==
 
-1.( Stakes Widget Top ) Верхний виджет
-2.( Stakes Widget Sports ) Боковой виджет
-3. Выбор категорий для Stakes Widget Top
-4. Главная страница
-5. Страница с выбраным турниром на сайте
+1.	( Stakes Widget Top ) Верхний виджет
+2.	( Stakes Widget Sports ) Боковой виджет
+3.	Выбор категорий для Stakes Widget Top
+4.	Главная страница
+5.	Страница с выбраным турниром на сайте
 
 == Changelog ==
 
