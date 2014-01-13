@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /*
   Plugin Name: Ставки на спорт. Прогнозы.
   Plugin URI: http://www.bukmekerskajakontora.ru/
