@@ -1,0 +1,141 @@
+.bw  {
+    width: 950px; /* ширина всего блока */
+    margin: 0px auto;
+    background: url("../images/score-mainbg.png") no-repeat scroll 50% bottom #333333;
+    border-bottom: 3px solid #222222;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font: bold 10px/10px helvetica,arial,sans-serif;  
+}
+.bw-wrapper {
+	width: 880px; /* ширина области карусели */
+	overflow: hidden; /* скрываем содержимое, выходящее за рамки основной области */
+	margin:5px 0px;
+	background: url("../images/score-mainbg.png") no-repeat scroll 50% bottom #333333;
+	padding: 10px;
+	position:relative;
+}
+.bw-items {
+	width: 100000px; /* устанавливаем большую ширину для набора элементов */
+	position: relative; /* позиционируем блок относительно основной области карусели */
+}
+.bw-block {
+	float: left; /* выстраиваем все элементы карусели в ряд */
+	width: 250px; /* задаём ширину каждого элемента */
+	padding: 4px; /* делаем оступы, чтобы элементы не сливались */
+
+	background: none repeat scroll 0 0 #777777;
+    border-radius: 3px;
+    box-shadow: 0 0 6px -1px #111111;
+    color: #FFFFFF !important;
+    display: inline;
+    float: left;
+
+    margin-right: 3px;
+    position: relative;
+    transition: background 0.3s ease 0s;
+    width: 150px !important;
+}
+
+/*********** BUTTONS ***********/
+.bw-button-left a, .bw-button-right a{
+	width: 25px; 
+	height: 47px; 
+	position: relative;
+	top: 34px;
+	cursor: pointer; 
+	text-decoration:none;
+}
+.bw-button-left a{
+	float: left; 
+	//background: url(../images/bw-left.png);
+	background: url("../images/car-buttons.gif") repeat scroll -25px 0 rgba(0, 0, 0, 0);
+
+}
+.bw-button-right a{
+	float: right;
+	//background: url(../images/bw-right.png); 
+	background: url("../images/car-buttons.gif") repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+
+.bw-score-teams {
+    color: #DDDDDD;
+    float: left;
+    font: bold 10px/10px helvetica,arial,sans-serif;
+    padding-left: 5px;
+    width: 105px;
+    white-space: nowrap; /* Запрещаем перенос строк */
+    overflow: hidden; /* Обрезаем все, что не помещается в область */
+    text-overflow: ellipsis;
+}
+
+.bw-score-right {
+    color: #DDDDDD;
+    float: right;
+    font: bold 10px/10px helvetica,arial,sans-serif;
+    padding-right: 5px;
+    text-align: right;
+    width: 30px;
+    white-space: nowrap; /* Запрещаем перенос строк */
+    overflow: hidden; /* Обрезаем все, что не помещается в область */
+    text-overflow: ellipsis;
+}
+span.bw-score-status {
+    background: url("../images/striped-bg.png") repeat scroll 0 0 #666666;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    color: #FFFFFF;
+    float: left;
+    font: bold 10px/10px helvetica,arial,sans-serif;
+    left: -2px;
+    margin-bottom: 2px;
+    overflow: hidden;
+    padding: 2px 5px;
+    position: relative;
+    text-overflow: ellipsis;
+    text-shadow: 1px 1px 0 #111111;
+    white-space: nowrap;
+    width: 140px;
+}
+
+
+.none-show{
+    display: none;
+}
+
+ul.bw-tabs {
+    height: 20px;
+    line-height: 20px;
+    list-style: none;
+    position: relative;
+    top: 4px;
+
+}
+.bw-tabs li {
+    float: left;
+    display: inline;
+    border-radius: 8px;
+    padding: 0 3px 0px;
+    margin-right: 5px;
+    cursor: pointer;
+    color: white;
+    position: relative;
+}
+.bw-tabs li:hover{
+    background: #101010
+}
+.bw-tabs li.current {
+    background: none repeat scroll 0 0 #EB1E00;
+}
+
+.bw-none{
+	display: none !important;
+}
+.bw-visible{
+	display: block;
+}
+
+.bw-o-p-name{margin:0 0 21px;}
+.bw-o-p-name .bw-o-p{}
+.bw-o-p-name .bw-o-p .bw-t{font-weight: bold; display: inline-flex; width:100px;}
+.bw-o-p-name .bw-o-p span img{margin-right: 5px;} 

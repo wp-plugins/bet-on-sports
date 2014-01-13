@@ -1,0 +1,104 @@
+.bw_section {
+    width: 99%;
+    background: #EFEFEF;
+    margin: 0 0 30px;
+}
+ul.tabs {
+    height: 28px;
+    line-height: 25px;
+    list-style: none;
+    border-bottom: 1px solid #DDD;
+    background: #FFF;
+}
+.tabs li {
+    float: left;
+    display: inline;
+    margin: 0 1px -1px 0;
+    padding: 0 13px 1px;
+    color: #777;
+    cursor: pointer;
+    background: #F9F9F9;
+    border: 1px solid #E4E4E4;
+    border-bottom: 1px solid #F9F9F9;
+    position: relative;
+}
+.tabs li:hover,
+.vertical .tabs li:hover {
+    color: #F70;
+    padding: 0 13px;
+    background: #FFFFDF;
+    border: 1px solid #FFCA95;
+}
+.tabs li.current {
+    color: #444;
+    background: #EFEFEF;
+    padding: 0 13px 2px;
+    border: 1px solid #D4D4D4;
+    border-bottom: 1px solid #EFEFEF;
+}
+.box {
+    display: none;
+    border: 1px solid #D4D4D4;
+    border-width: 0 1px 1px;
+    background: #EFEFEF;
+    padding: 0 12px;
+}
+.box.visible {
+    display: block;
+}
+
+#bw_link_top{
+    border-color: #DFDFDF;
+    font-size: 1.7em;
+    height: 1.7em;
+    line-height: 100%;
+    margin: 1px 0;
+    outline: 0 none;
+    padding: 3px 8px;
+    width: 100%;
+    background-color: #FFFFFF;
+}
+
+.bw_button{
+    height: 30px;
+    line-height: 28px;
+    padding: 0 12px 2px;
+    background-color: #21759B;
+    background-image: linear-gradient(to bottom, #2A95C5, #21759B);
+    border-color: #21759B #21759B #1E6A8D;
+    /*/box-shadow: 0 1px 0 rgba(120, 200, 230, 0.5) inset;*/
+    cursor: pointer;
+    color: #FFFFFF;
+    text-decoration: none;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.sport_list{}
+.sport_list li{
+	display: inline-block;
+	width: 12%;
+	 text-overflow: ellipsis;
+    white-space: nowrap;
+	overflow: hidden;
+	margin: 0;
+}
+.bw_button_small{
+	background: none repeat scroll 0 0 #E0E0E0;
+	border: 0 none;
+    border-radius: 2px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-left: 4px;
+    padding: 4px 8px;
+    position: relative;
+    text-decoration: none;
+    text-shadow: none;
+    top: -3px;
+}
+.bw_button_small:hover{
+	cursor: pointer;
+	background: #0074A2;
+	color: white;
+}
+.bw-form-label{font-weight: bold; display: inline-flex; width:100px;}
+#BW_ab_lang, #BW_ab_link{width: 20%;}
