@@ -8,12 +8,12 @@ if ($rr[1] == 'wp-admin') {
 }
 
 define('BW_ABSPATH', dirname(__FILE__) . '/');
-define('BW', 'wp-content/plugins/bukmekers-widget/');
-define('BW_WIDGET', 'wp-content/plugins/bukmekers-widget/widget/');
-define('BW_JS', WP_PLUGIN_URL . '/bukmekers-widget/js/');
-define('BW_CSS', WP_PLUGIN_URL . '/bukmekers-widget/css/');
-define('BW_IMAGES', $url . '/wp-content/plugins/bukmekers-widget/images/');
-define('BW_IMAGE', WP_PLUGIN_URL . '/bukmekers-widget/images/');
+define('BW', 'wp-content/plugins/bet-on-sports/');
+define('BW_WIDGET', 'wp-content/plugins/bet-on-sports/widget/');
+define('BW_JS', WP_PLUGIN_URL . '/bet-on-sports/js/');
+define('BW_CSS', WP_PLUGIN_URL . '/bet-on-sports/css/');
+define('BW_IMAGES', $url . '/wp-content/plugins/bet-on-sports/images/');
+define('BW_IMAGE', WP_PLUGIN_URL . '/bet-on-sports/images/');
 define('BW_LOAD_TABS', BW_ABSPATH . 'admin_page_tab/');
 
 include 'bw_xml.php';
