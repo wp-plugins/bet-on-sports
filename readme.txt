@@ -56,7 +56,7 @@ Bet on sports - Плагин позволяет выводить в виджет
     	register_sidebar($args_sidebar1);
 		register_sidebar($args_sidebar2);
 	endif;
-?></code>
+?></code> 
 После создания сайдбаров нужно  вывести их в теме в нужном месте Вашего шаблона вставляем такой код:
 <code>
 if( ! function_exists( 'register_sidebar' ) ) :
