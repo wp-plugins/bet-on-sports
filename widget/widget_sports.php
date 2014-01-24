@@ -46,7 +46,7 @@ class Bw_sports_widget extends WP_Widget {
 		echo '<ul >';
 		foreach ($res as $dat) {
 			if ($dat->trans_sport != '') {
-				echo "<li><div class='openSub first_ul'><img src='" . get_option('siteurl') . "/wp-content/plugins/bukmekers-widget/images/sports/" . $dat->trans_sport . ".png' width='16'><span class='bw-title'>{$dat->name_sport}</span></div>";
+				echo "<li><div class='openSub first_ul'><img src='" . get_option('siteurl') . "/wp-content/plugins/bet-on-sports/images/sports/" . $dat->trans_sport . ".png' width='16'><span class='bw-title'>{$dat->name_sport}</span></div>";
 				echo '<ul class="second_ul" style="display:none;">';
 				foreach ($res2 as $dat2) {
 
