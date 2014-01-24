@@ -56,9 +56,9 @@ class Bw_top_widget extends WP_Widget {
 				'sport' => @$_Sports[2]
 			);
 		}
-		?><div id="opt" ajax="<?php echo get_option('siteurl'); ?>"><a href="http://www.bukmekerskajakontora.ru" hidden="hidden" ></a></div>
+		?>
 		<div class="bw"> 
-			
+
 			<div class="bw-button-left"><a href="javascript:void(0);"> </a></div> 
 			<div class="bw-button-right"><a href="javascript:void(0);"> </a></div> 
 

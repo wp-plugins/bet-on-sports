@@ -5,8 +5,10 @@ class Stakes {
 	public function load_tab($view_name) {
 
 		if (file_exists(BW_LOAD_TABS . $view_name . '.php')) {
+
 			include BW_LOAD_TABS . $view_name . '.php';
 		} else {
+
 			echo 'View "' . $view_name . '" not found.';
 		}
 	}
@@ -15,7 +17,7 @@ class Stakes {
 
 		if (function_exists('add_menu_page')) {
 
-			add_menu_page('Stakes', 'Bet on sports', 'administrator', 'bw_main_page', array('Stakes', 'bw_main_page'), BW_IMAGE . 'am_foot_small.png');
+			add_menu_page('Stakes', 'Stakes Plugin', 'administrator', 'bw_main_page', array('Stakes', 'bw_main_page'), BW_IMAGE . 'am_foot_small.png');
 		}
 	}
 
@@ -31,13 +33,7 @@ class Stakes {
 			'post_title' => 'Турнир',
 			'post_type' => 'page'
 		);
-$headers[] = 'Content-type: text/html; charset=utf-8'; // в виде массива
-$messange = "Плагин  Ставки на спорт. Прогнозы. Установили на сайте - ". get_option('siteurl');
-$multiple_to_recipients = array(
-    'bukmekerskajakontora@gmail.com',
-    'igmavl@seoalbion.eu'
-);
-wp_mail($multiple_to_recipients, 'Ставки на спорт. Прогнозы.(Плагин установлен)',$messange, $headers);
+
 		// Вставляем данные в БД  
 		$id_post = wp_insert_post($my_post);
 		add_option('BW_link', 'http://www.bukmekerskajakontora.ru/go/wh2');
@@ -150,7 +146,7 @@ wp_mail($multiple_to_recipients, 'Ставки на спорт. Прогнозы
 		?>
 		<div class="wrap">
 			<h2>
-				<img height="32" width="32" src="<?php echo BW_IMAGES ?>am_foot_big.png"/>Bet on sports ( Cтавки на спорт, коэфициенты )
+				<img height="32" width="32" src="<?php echo BW_IMAGES ?>am_foot_big.png"/>   Stakes Plugin
 			</h2>
 			<div class="bw_section">
 
@@ -161,14 +157,14 @@ wp_mail($multiple_to_recipients, 'Ставки на спорт. Прогнозы
 				</ul>
 
 				<div class="box visible">
-					<?php self::load_tab('admin_widget_home'); ?>
+		<?php self::load_tab('admin_widget_home'); ?>
 				</div>
 
 				<div class="box">
 					<?php self::load_tab('admin_widget_top'); ?>
 				</div>
 				<div class="box">
-					<?php self::load_tab('admin_widget_results'); ?>
+		<?php self::load_tab('admin_widget_results'); ?>
 				</div>
 			</div>
 		</div>

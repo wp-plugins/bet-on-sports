@@ -67,7 +67,17 @@ class Bw_sports_widget extends WP_Widget {
 			}
 		}
 		echo '</ul>';
-
+		
+		/* bukmeker only */
+		echo "<script>
+			jQuery(document).ready(function($) {
+				//$('#sidebar-wrapper').isotope('destroy');
+				$('#sidebar-wrapper').removeClass('isotope');
+				$('#sidebar-wrapper').removeAttr('style');
+			});
+		</script>";
+		
+		/* bukmeker only */
 
 		$url = explode("/", get_bloginfo('url'));
 		$uri = ($url[3]) ? '/' . $url[3] . '/' : '/';
@@ -92,10 +102,9 @@ class Bw_sports_widget extends WP_Widget {
 
 	public function form($instance) {
 		// Название виджета
-		
 		?><p>
 			<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Название:', 'example'); ?></label>
-			<input id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" value="<?php echo @$instance['title']; ?>" style="width:100%;" />
+			<input id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" value="<?php echo $instance['title']; ?>" style="width:100%;" />
 		</p><?php
 	}
 

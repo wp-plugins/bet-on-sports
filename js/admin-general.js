@@ -42,7 +42,7 @@
             // since 2.8 ajaxurl is always defined in the admin header and points to admin-ajax.php
             jQuery.post(ajax, data, function(response) {
                  $('#krutilka').css({"display":"none"});
-                alert("Данные загруженны успешно. Обновите страницу");
+                alert("Данные загружены успешно. Обновите страницу");
             });
         });
 		
@@ -60,11 +60,11 @@
                  $('#krutilka').css({"display":"none"});
 				 
 				 if(response == 'true'){
-					alert('Сброс к стандартным настройкам завершен Успешно');
+					alert('Сброс к стандартным настройкам завершился успешно');
 				 }
 				 
 				 if(response == 'false'){
-					alert('Сброс к стандартным настройкам завершен не удачей');
+					alert('Сброс к стандартным настройкам завершился не удачей');
 				 }
 				 
             });

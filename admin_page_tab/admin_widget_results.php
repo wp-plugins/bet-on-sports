@@ -17,7 +17,7 @@
 	$res = $wpdb->get_results("SELECT * FROM $sport_table ");
 	$id_cat = explode(',', get_option('BW_sport_cat'));
 	?>
-	<div class="bw-text">Выберите категории которые будут отображаться в виджете ( Stakes Widget Sports  ) на сайте, если все галочки сняты то отображаться на сайте будут все категории </div>
+	<div class="bw-text">Выберите категории, которые будут отображаться в виджете Stakes Widget Sports на сайте, если все галочки сняты, то отображаться на сайте будут все категории </div>
 	<ul class="sport_list">
 <?php
 foreach ($res as $sport) {
@@ -29,8 +29,8 @@ foreach ($res as $sport) {
 		}
 		?>
 				<li>
-					<input type="checkbox" <?php echo $chec; ?> name="sportID[]" title="<?php echo $sport->name_sport; ?>" value="<?php echo $sport->ID_sport; ?>"/>
-					<label class="label" title="<?php echo $sport->name_sport; ?>" for="sportID[]"><?php echo $sport->name_sport; ?></label>
+					<input type="checkbox" <?php echo $chec; ?> name="sportID[]" value="<?php echo $sport->ID_sport; ?>"/>
+					<label class="label" for="sportID[]"><?php echo $sport->name_sport; ?></label>
 				</li>
 	<?php }
 } ?>

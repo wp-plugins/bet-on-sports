@@ -21,11 +21,11 @@
 	if (get_option('BW_show_link') != 'close') {
 		if (get_option('BW_show_link') == 'close'):
 			?>
-			<p>Если вам нужна личная ссылка, нажмите эту кнопку.<a href="http://www.bukmekerskajakontora.ru/" target="_blank" onclick="window.location = '?page=bw_main_page&link=show'" class="bw_button_small">Получить партнерскую ссылку</a></p>
+			<p>Если вам нужна личная ссылка, нажмите эту кнопку <a href="http://www.bukmekerskajakontora.ru/" target="_blank" onclick="window.location = '?page=bw_main_page&link=show'" class="bw_button_small">Получить партнерскую ссылку</a></p>
 			<!--?page=bw_main_page&link=show-->
 		<?php elseif (get_option('BW_show_link') == 'show'): ?>
 			<p>
-				Ссылки на коэфициентах ведут на сайт букмекерской конторы bet at home.
+				Ссылки на коэффициентах ведут на сайт букмекерской конторы bet-at-home.
 			</p><p>
 				<label for="BW_ab_lang" class="bw-form-label">Филиальная ссылка</label>
 				<input id="BW_ab_lang" type="text" autocomplete="off" value="<?php echo get_option('BW_link'); ?>" size="30" name="bw_link_top">
@@ -47,7 +47,7 @@
 		echo '<script>window.location = "' . $_SERVER['HTTP_REFERER'] . '";</script>';
 	}
 	?>
-	<div class="bw-text">Выберите категории которые будут отображаться в виджете ( Stakes Widget Top ) на сайте, если все галочки сняты то отображаться на сайте будут все категории</div>
+	<div class="bw-text">Выберите категории, которые будут отображаться в виджете Stakes Widget Top на сайте. Если все галочки сняты, то отображаться на сайте будут все категории</div>
 	<ul class="sport_list">
 		<?php
 		foreach ($res as $sport) {
@@ -59,8 +59,8 @@
 				}
 				?>
 				<li>
-					<input type="checkbox" <?php echo $chec; ?> name="sportID[]" title="<?php echo $sport->name_sport; ?>" value="<?php echo $sport->ID_sport; ?>"/>
-					<label class="label" title="<?php echo $sport->name_sport; ?>" for="sportID[]"><?php echo $sport->name_sport; ?></label>
+					<input type="checkbox" <?php echo $chec; ?> name="sportID[]" value="<?php echo $sport->ID_sport; ?>"/>
+					<label class="label" for="sportID[]"><?php echo $sport->name_sport; ?></label>
 				</li>
 			<?php }
 		} ?>
