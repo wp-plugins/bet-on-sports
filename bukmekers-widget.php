@@ -3,10 +3,10 @@
   Plugin Name: Stakes on sport. Prognoses.
   Plugin URI: http://www.bukmekerskajakontora.ru/
   Description: Tables, stakes on sport, prognoses. There are two widgets - the upper and the side ones, where the coefficients for stakes of bookmaker's office betathome are shown, the visitors of your site can enter stakes at once! The partner reference can be changed, there is an opportunity to screen different types of sport.
-  Version: 1.2
+  Version: 2.0
   Author: SEOAlbion
   Author URI: http://www.bukmekerskajakontora.ru/
-  Tags: widgets, Stakes
+  Tags: sport, stakes, sport prognoses, coefficients, tables of stakes , bookmaker's coefficient, bookmaker's office, stakes on sport, sport widgets,  widgets , affiliate
  */
 
 register_activation_hook(__FILE__, 'bw_set_options');
