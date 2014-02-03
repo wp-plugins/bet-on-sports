@@ -118,8 +118,17 @@ Then one should place the installed widgets in the side-bars. For this purpose j
 3.	Selection of categories for StakesWidgetTop
 4.	The main page
 5.	The page of selected tournament on the site
-== Changelog ==
-The list of versions and changes.
+== Change Log ==
+= 1.0 =
+* Release.
+= 1.1 =
+* Fixed js code.
+= 1.2 =
+* Added extra checks and updated menu widget
+= 1.2 =
+* The first release
+= 2.0 =
+* Added localization: Russian, English, German, Czech, Portuguese, Italian, Spanish
 == Upgrade Notice  ==
 = 1.0 =
 * Release.
