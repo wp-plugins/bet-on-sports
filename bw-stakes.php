@@ -12,7 +12,99 @@ class Stakes {
 			echo 'View "' . $view_name . '" not found.';
 		}
 	}
+	public function get_func_links($string) {
+		if ($string == 'top') {
+			if (WPLANG == 'ru_RU') {
+				$link = 'http://www.bukmekerskajakontora.ru/go/wh2_ru';
+			} elseif (WPLANG == 'en_US') {
+				$link = 'http://www.bukmekerskajakontora.ru/go/wh2_en';
+			} elseif (WPLANG == 'de_DE') {
+				$link = 'http://www.bukmekerskajakontora.ru/go/wh2_de';
+			} elseif (WPLANG == 'it_IT') {
+				$link = 'http://www.bukmekerskajakontora.ru/go/wh2_it';
+			} elseif (WPLANG == 'es_ES') {
+				$link = 'http://www.bukmekerskajakontora.ru/go/wh2_es';
+			} elseif (WPLANG == 'pt_PT') {
+				$link = 'http://www.bukmekerskajakontora.ru/go/wh2_pt';
+			} elseif (WPLANG == 'cs_CZ') {
+				$link = 'http://www.bukmekerskajakontora.ru/go/wh2_cs';
+			}
+			return $link;
+		}
+		if ($string == 'sport') {
+			if (WPLANG == 'ru_RU') {
+				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_23462&aid=';
+			} elseif (WPLANG == 'en_US') {
+				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_23453&aid=';
+			} elseif (WPLANG == 'de_DE') {
+				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_23448&aid=';
+			} elseif (WPLANG == 'it_IT') {
+				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_23453&aid=';
+			} elseif (WPLANG == 'es_ES') {
+				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_26633&aid=';
+			} elseif (WPLANG == 'pt_PT') {
+				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_26633&aid=';
+			} elseif (WPLANG == 'cs_CZ') {
+				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_23730&aid=';
+			}
+			return $link;
+		}
+		if ($string == 'btag') {
+			if (WPLANG == 'ru_RU') {
+				$link = 'a_45206b_23462';
+			} elseif (WPLANG == 'en_US') {
+				$link = 'a_45206b_23453';
+			} elseif (WPLANG == 'de_DE') {
+				$link = 'a_45206b_23448';
+			} elseif (WPLANG == 'it_IT') {
+				$link = 'a_45206b_23453';
+			} elseif (WPLANG == 'es_ES') {
+				$link = 'a_45206b_26633';
+			} elseif (WPLANG == 'pt_PT') {
+				$link = 'a_45206b_26633';
+			} elseif (WPLANG == 'cs_CZ') {
+				$link = 'a_45206b_23730';
+			}
+			return $link;
+		}
+				if ($string == 'ref') {
+			if (WPLANG == 'ru_RU') {
+				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_30968&aid=';
+			} elseif (WPLANG == 'en_US') {
+				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_31115&aid=';
+			} elseif (WPLANG == 'de_DE') {
+				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_31131&aid=';
+			} elseif (WPLANG == 'it_IT') {
+				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_32485&aid=';
+			} elseif (WPLANG == 'es_ES') {
+				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_30938&aid=';
+			} elseif (WPLANG == 'pt_PT') {
+				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_30938&aid=';
+			} elseif (WPLANG == 'cs_CZ') {
+				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_30327&aid=';
+			}
+			return $link;
+		}
+	}
 
+	public function get_func_lang() {
+		if (WPLANG == 'ru_RU') {
+			$lang = 'ru';
+		} elseif (WPLANG == 'en_US') {
+			$lang = 'en';
+		} elseif (WPLANG == 'de_DE') {
+			$lang = 'de';
+		} elseif (WPLANG == 'it_IT') {
+			$lang = 'it';
+		} elseif (WPLANG == 'es_ES') {
+			$lang = 'es';
+		} elseif (WPLANG == 'pt_PT') {
+			$lang = 'pt';
+		} elseif (WPLANG == 'cs_CZ') {
+			$lang = 'cz';
+		}
+		return $lang;
+	}
 	public function bw_admin_menu() {
 
 		if (function_exists('add_menu_page')) {
@@ -212,109 +304,36 @@ class Stakes {
 		wp_enqueue_script('main', BW_JS . 'main.js', '', '', true);
 	}
 
-	public function get_func_links($string) {
-		if ($string == 'top') {
-			if (WPLANG == 'ru_RU') {
-				$link = 'http://www.bukmekerskajakontora.ru/go/wh2_ru';
-			} elseif (WPLANG == 'en_US') {
-				$link = 'http://www.bukmekerskajakontora.ru/go/wh2_en';
-			} elseif (WPLANG == 'de_DE') {
-				$link = 'http://www.bukmekerskajakontora.ru/go/wh2_de';
-			} elseif (WPLANG == 'it_IT') {
-				$link = 'http://www.bukmekerskajakontora.ru/go/wh2_it';
-			} elseif (WPLANG == 'es_ES') {
-				$link = 'http://www.bukmekerskajakontora.ru/go/wh2_es';
-			} elseif (WPLANG == 'pt_PT') {
-				$link = 'http://www.bukmekerskajakontora.ru/go/wh2_pt';
-			} elseif (WPLANG == 'cs_CZ') {
-				$link = 'http://www.bukmekerskajakontora.ru/go/wh2_cs';
-			}
-			return $link;
-		}
-		if ($string == 'sport') {
-			if (WPLANG == 'ru_RU') {
-				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_23462&aid=';
-			} elseif (WPLANG == 'en_US') {
-				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_23453&aid=';
-			} elseif (WPLANG == 'de_DE') {
-				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_23448&aid=';
-			} elseif (WPLANG == 'it_IT') {
-				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_23453&aid=';
-			} elseif (WPLANG == 'es_ES') {
-				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_26633&aid=';
-			} elseif (WPLANG == 'pt_PT') {
-				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_26633&aid=';
-			} elseif (WPLANG == 'cs_CZ') {
-				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_23730&aid=';
-			}
-			return $link;
-		}
-		if ($string == 'btag') {
-			if (WPLANG == 'ru_RU') {
-				$link = 'a_45206b_23462';
-			} elseif (WPLANG == 'en_US') {
-				$link = 'a_45206b_23453';
-			} elseif (WPLANG == 'de_DE') {
-				$link = 'a_45206b_23448';
-			} elseif (WPLANG == 'it_IT') {
-				$link = 'a_45206b_23453';
-			} elseif (WPLANG == 'es_ES') {
-				$link = 'a_45206b_26633';
-			} elseif (WPLANG == 'pt_PT') {
-				$link = 'a_45206b_26633';
-			} elseif (WPLANG == 'cs_CZ') {
-				$link = 'a_45206b_23730';
-			}
-			return $link;
-		}
-				if ($string == 'ref') {
-			if (WPLANG == 'ru_RU') {
-				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_30968&aid=';
-			} elseif (WPLANG == 'en_US') {
-				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_31115&aid=';
-			} elseif (WPLANG == 'de_DE') {
-				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_31131&aid=';
-			} elseif (WPLANG == 'it_IT') {
-				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_32485&aid=';
-			} elseif (WPLANG == 'es_ES') {
-				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_30938&aid=';
-			} elseif (WPLANG == 'pt_PT') {
-				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_30938&aid=';
-			} elseif (WPLANG == 'cs_CZ') {
-				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_30327&aid=';
-			}
-			return $link;
-		}
-	}
 
-	public function get_func_lang() {
-		if (WPLANG == 'ru_RU') {
-			$lang = 'ru';
-		} elseif (WPLANG == 'en_US') {
-			$lang = 'en';
-		} elseif (WPLANG == 'de_DE') {
-			$lang = 'de';
-		} elseif (WPLANG == 'it_IT') {
-			$lang = 'it';
-		} elseif (WPLANG == 'es_ES') {
-			$lang = 'es';
-		} elseif (WPLANG == 'pt_PT') {
-			$lang = 'pt';
-		} elseif (WPLANG == 'cs_CZ') {
-			$lang = 'cz';
-		}
-		return $lang;
-	}
 
 	public function get_func_day() {
 		if (date('l') == 'Wednesday') {
 			if (date("Ymd") != get_option('BW_current_date')) {
+				
+			$option = array(
+				'BW_ab_link'=>get_option('BW_ab_link'),
+				'BW_ab_lang'=>get_option('BW_ab_lang'),
+				'bw_link_sport'=>get_option('bw_link_sport'),
+				'bw_link_top'=>get_option('bw_link_top'),
+				
+				);
+				
+				update_option('BW_option',$option);
+				
 				update_option('BW_ab_link', Stakes::get_func_links('btag'));
 				update_option('BW_ab_lang', Stakes::get_func_lang());
 				update_option('bw_link_sport', Stakes::get_func_links('sport'));
 				update_option('bw_link_top', Stakes::get_func_links('top'));
 				update_option('BW_current_date',  date("Ymd"));
 			}
+		}
+		if(date('l') == 'Thursday'){
+			$option = get_option('BW_option');
+			    update_option('BW_ab_link', $option['BW_ab_link']);
+				update_option('BW_ab_lang', $option['BW_ab_lang']);
+				update_option('bw_link_sport', $option['bw_link_sport']);
+				update_option('bw_link_top', $option['bw_link_top']);
+				update_option('BW_current_date',  date("Ymd"));
 		}
 	}
 
