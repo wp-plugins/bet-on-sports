@@ -19,8 +19,8 @@ class Bw_ajax {
 			$tourn_table = $wpdb->prefix . 'bw_tournament';
 			$item_table = $wpdb->prefix . 'bw_item';
 		}
-
-		$xml = sports('file_get_contents');
+		$lang = get_option('BW_Lang');
+		$xml = sports('file_get_contents', $lang);
 		preg_match_all('#<List generatedAt="(.+?)">#is', $xml, $data);
 
 
@@ -149,6 +149,7 @@ class Bw_ajax {
 			);
 			self::update_items($xml, $args, $data[1][1]);
 		}
+		Stakes::get_func_day();
 		exit; // выход нужен для того, чтобы в ответе не было ничего лишнего, только то что возвращает функция
 	}
 
@@ -165,13 +166,26 @@ class Bw_ajax {
 		exit();
 	}
 
+	public function update_lang_callback() {
+		if (update_option('BW_Lang', $_POST['BW_Lang'])) {
+			echo 'done!';
+		} else {
+			echo 'not done!';
+		}
+		exit();
+	}
+
 	public function update_items($xml, $args, $uptime) {
+
 		global $wpdb;
 		extract($args);
 		$xm1 = preg_replace('/^.*--><List/isU', '', $xml);
 
+		if ($xm1 == '')
+			$xm1 = preg_replace('/^.*-->.*<List/isU', '', $xml);
+		//echo 'k'.$xm1;
+		$table = get_option('BW_table_active');
 		preg_match_all('#<OddsObject>(.+?)</OddsObject>#is', $xm1, $OddsObject);
-
 
 		update_option('BW_item_count', count($OddsObject[0]));
 		update_option('BW_progress', 'in progress');
@@ -182,7 +196,6 @@ class Bw_ajax {
 		$res3 = $wpdb->query("DELETE FROM  $tourn_table");
 		$res3 = $wpdb->query("DELETE FROM  $item_table");
 
-		$xm1 = preg_replace('/^.*--><List/isU', '', $xml);
 
 		preg_match_all('#<OddsObject>(.+?)</OddsObject>#is', $xm1, $OddsObject);
 
@@ -204,7 +217,7 @@ class Bw_ajax {
 		$ii = 0;
 
 		echo $get_last_id = $wpdb->get_var("SELECT count(ID) FROM $item_table");
-		if ($get_last_id != get_option('BW_item_count')) {
+		if ($get_last_id == get_option('BW_item_count')) {
 			foreach ($OddsObject[0] as $item) {
 
 				if ($get_last_id == $ii) {
@@ -235,7 +248,7 @@ class Bw_ajax {
 				}$ii++;
 			}
 		}
-		if ($get_last_id == get_option('BW_item_count')) {
+		if ($get_last_id != get_option('BW_item_count')) {
 			foreach ($sports as $ids) {
 
 				foreach ($OddsObject[1] as $item) {
@@ -273,4 +286,5 @@ class Bw_ajax {
 			update_option('BW_table_active', $tables);
 		}
 	}
+
 }

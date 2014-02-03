@@ -1,39 +1,33 @@
-=== Bet on sports - Таблицы, ставки на спорт, прогнозы.  ===
+=== Bet on sports - Russian, English, German, Czech, Portuguese, Italian, Spanish ===
 Contributors: SEOAlbion
 Donate link: http://www.bukmekerskajakontora.ru/
-Tags: спорт, ставки, прогнозы на спорт, коэффициенты, таблица ставок, букмекерский коэффициент, Букмекерская контора, спортивные ставки, спортивные виджеты, виджеты
-Requires at least: 1.2
-Tested up to: 2
-Stable tag: 1.2
+Tags: sport, stakes, sport prognoses, coefficients, tables of stakes , bookmaker's coefficient, bookmaker's office, stakes on sport, sport widgets,  widgets , affiliate
+Requires at least: 2.0
+Tested up to: 2.1
+Stable tag: 2.0
 License: GPL
 License URI: http://www.gnu.org/licenses/gpl.html
-
-Bet on sports - Плагин выводит актуальные коэффициенты на спортивные события. 
-
+Betonsports - The plug-in shows the actual coefficients for consecutive sport events. 
 == Description ==
-**Таблицы, ставки на спорт, прогнозы.** Два виджета, верхний и боковой, на которых выводятся коэффициенты ставок букмекерской конторы **bet-at-home**. Посетители вашего сайта сразу же смогут сделать свои ставки! В этих виджетах можно менять партнерскую ссылку, а также выводить разные виды спорта.
+**Tables, stakes on sport, prognoses.** There are two widgets - the upper and the side ones, where the coefficients for stakes of bookmaker's office betathome are shown, the visitors of your site can enter stakes at once! The partner reference can be changed, there is an opportunity to screen different types of sport.
+**Betonsports** - shows the actual coefficients for consecutive sport events. You can also become a participator of partner program bet-at-home.com
+The plug-in consists of two widgets :
 
-**Bet on sports** - позволяет выводить в виджетах актуальные коэффициенты на спортивные события. Так же можно стать участником партнерской программы **bet-at-home.com**
-Плагин состоит из двух виджетов:
+* ( Stakes Widget Top ) Upper widget
 
-* ( Stakes Widget Top ) Верхний виджет
-* ( Stakes Widget Sports ) Боковой виджет
- 
-**Stakes Widget Top** - В этом виджете выводятся актуальные коэффициенты по основным ставкам из выбранных категорий.
+* ( Stakes Widget Sports ) Side widget
 
-**Stakes Widget Sports** - Этот виджет выводит на экран Виды спорта разделённые на место проведения и турниры, по нажатию на турнир откроется сводка вопросов и коэффициентов.
- 
-Все данные хранятся на сайте http://www.bukmekerskajakontora.ru  в XML файлах, файлы обновляются  каждый день. Плагин автоматически проверяет ajax запросом   дату обновления XML файла на сервере,
- если даты не совпадают, тогда данные записываются в промежуточные таблицы, созданные в базе при установке плагина, после как все данные с XML файла будут в базе, виджеты начнут показывать эти данные.
- 
- Так же можно обновить принудительно в админ-панели плагина
+**StakesWidgetTop** - In this widget there are actual coefficients for common stakes from selected categories shown.
 
+**StakesWidgetSports** - This widget screens the Types of sport subdivided into the Event Location and  the Tournaments. By clicking the Tournaments the digest of questions and coefficients will be opened.
+All the data are saved at http://www.bukmekerskajakontora.ru  in the form of XML files, the files are renewed daily. The plug-in automatically checks the date of XML file’s renewal on the server by means of ajax-request. If the dates are not concurred, the data is registered in staging tables created in the base during the installation of the plug-in. When all the data of XML file are loaded into the base, the widgets will screen them at once.
+ Also you can forcedly renew the data in admin panel of the plug-in
 == Installation ==
-1. Распакуйте архив с плагином в папку `/wp-content/plugins/bukmekers-widget`
-2. Активируйте плагин через меню 'Плагины' панели управления.
-3. Вывод на экран:
-Для того что бы вывести виджеты, сначала необходимо создать два сайдбара  в файле темы (functions.php) http://codex.wordpress.org/Function_Reference/register_sidebar
-Например:
+1. Unpack the plug-in into the folder `/wp-content/plugins/bukmekers-widget`
+2. Activate the plug-in through the ‘Plug-ins’ menu in the control panel.
+3. Screening:
+To screen the widgets you should at first create two side-bars in the file of the theme (functions.php) http://codex.wordpress.org/Function_Reference/register_sidebar
+For example:
 <code>
 <?php 
 	$args_sidebar1 = array(
@@ -60,7 +54,7 @@ Bet on sports - Плагин выводит актуальные коэффиц�
 		register_sidebar($args_sidebar2);
 	endif;
 ?></code>
-После создания сайдбаров нужно  вывести их в теме в нужном месте Вашего шаблона вставляем такой код:
+After the side-bars were created one should add them to the theme. Paste the following code to the necessary point of your pattern:
 <code>
 if( ! function_exists( 'register_sidebar' ) ) :
 dynamic_sidebar('Sidebar name1');
@@ -70,21 +64,16 @@ dynamic_sidebar('Sidebar name2');
 endif;
 
 </code>
-После этого необходимо вывести установленные виджеты в созданных сайдабарах. В админ-панели на странице виджетов просто перетаскиваем необходимый нам виджет в созданный нами сайдбар. 
-
-== Frequently Asked Questions ==
-
-= Нужно ли где-то регистрироваться, чтобы плагин заработал? =
-
-Нет, плагин заработает сразу после установки!
-= Виджеты не корректно отображаются на странице, что делать? =
-Для  того чтобы виджеты работали корректно, в Вашей теме должен быть подключен  плагин jQuery , если плагин не подключен, то в файле темы functions.php  вставляем следующий код : 
+Then one should place the installed widgets in the side-bars. For this purpose just carry the necessary widget in the admin panel to suitable side-bar. 
+== Frequently Asked Questions==
+= Should I register to activate the plug-in =
+No, the plug-in is ready for work after installation!
+= Widgets are screened incorrectly on the page, what to do? =
+For the correct work of widgets in your theme there should be the plug-in jQuery, if it is not plugged-in, then paste the following code into the theme file functions.php : 
 <?php wp_enqueue_script("jquery"); ?>
-
-= Виджеты не появились автоматически в моей теме, что делать? =
-
-Для того что бы вывести виджеты, необходимо создать два сайдбара  в файле темы (functions.php) http://codex.wordpress.org/Function_Reference/register_sidebar
-Например:
+= Widgets are not shown automatically in my theme, what to do? =
+To screen the widgets you should at first create two side-bars in the theme file (functions.php) http://codex.wordpress.org/Function_Reference/register_sidebar
+For example:
 <code>
 <?php 
 	$args_sidebar1 = array(
@@ -111,7 +100,7 @@ endif;
 		register_sidebar($args_sidebar2);
 	endif;
 ?></code>
-После создания сайдбаров необходимо вывести их в теме и в нужном месте Вашего шаблона вставляем такой код:
+After the side-bars were created one should add them to the theme. Paste the following code to the necessary point of your pattern:
 <code>
 if( ! function_exists( 'register_sidebar' ) ) :
 dynamic_sidebar('Sidebar name1');
@@ -121,26 +110,24 @@ dynamic_sidebar('Sidebar name2');
 endif;
 
 </code>
-После этого необходимо вывести установленные виджеты в созданных сайдбарах. В админ панели на странице виджетов просто перетаскиваем нужный нам виджет в созданный нами сайдбар. 
 
+Then one should place the installed widgets in the side-bars. For this purpose just carry the necessary widget in the admin panel to suitable side-bar. 
 == Screenshots ==
-
-1.	( Stakes Widget Top ) Верхний виджет
-2.	( Stakes Widget Sports ) Боковой виджет
-3.	Выбор категорий для Stakes Widget Top
-4.	Главная страница
-5.	Страница с выбранным турниром на сайте
-
+1.	( Stakes Widget Top ) Upper widget
+2.	( Stakes Widget Sports ) Side widget
+3.	Selection of categories for StakesWidgetTop
+4.	The main page
+5.	The page of selected tournament on the site
 == Changelog ==
-
-Список версий и изменений.
-
-== Upgrade Notice ==
+The list of versions and changes.
+== Upgrade Notice  ==
 = 1.0 =
-* Релиз.
+* Release.
 = 1.1 =
-* Исправлен js код.
+* Fixed js code.
 = 1.2 =
-* Добавлены дополнительные проверки и обновлено меню виджета
+* Added extra checks and updated menu widget
 = 1.2 =
-Первый релиз
+* The first release
+= 2.0 =
+* Added localization: Russian, English, German, Czech, Portuguese, Italian, Spanish

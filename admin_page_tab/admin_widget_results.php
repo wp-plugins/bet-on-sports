@@ -17,7 +17,7 @@
 	$res = $wpdb->get_results("SELECT * FROM $sport_table ");
 	$id_cat = explode(',', get_option('BW_sport_cat'));
 	?>
-	<div class="bw-text">Выберите категории, которые будут отображаться в виджете Stakes Widget Sports на сайте, если все галочки сняты, то отображаться на сайте будут все категории </div>
+	<div class="bw-text"><?php _e('Choose the categories that will be shown in widget (Stakes Widget Sports) on the site. If all the check marks are removed, the site will screen all the categories','bet-on-sports'); ?>  </div>
 	<ul class="sport_list">
 <?php
 foreach ($res as $sport) {
@@ -35,11 +35,11 @@ foreach ($res as $sport) {
 	<?php }
 } ?>
 	</ul>
-	<input type="submit" class="bw_button_small" value="Сохранить">
+	<input type="submit" class="bw_button_small" value="<?php _e('Save','bet-on-sports'); ?>">
 </form>
 
 <?php
-if (@$_GET['results_button'] == 'update') {
+if (isset( $_GET['results_button'] ) && $_GET['results_button'] == 'update') {
 	if (isset($_POST['sportID'])) {
 		$i = 0;
 		$idcount = count($_POST['sportID']);

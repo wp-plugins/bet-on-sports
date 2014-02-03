@@ -12,8 +12,8 @@ function results() {
 	return Bw_xml::get_results();
 }
 
-function sports($parse_type) {
-	return Bw_xml::get_sports($parse_type);
+function sports($parse_type,$lang = 'en_US') {
+	return Bw_xml::get_sports($parse_type,$lang);
 }
 
 function deleteOptions() {

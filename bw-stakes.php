@@ -30,23 +30,25 @@ class Stakes {
 			'post_content' => '[bw_get_id_tournament]',
 			'post_name' => 'tournament',
 			'post_status' => 'publish',
-			'post_title' => 'Турнир',
+			'post_title' => __('Tournament', 'bet-on-sports'),
 			'post_type' => 'page'
 		);
 
 		// Вставляем данные в БД  
 		$id_post = wp_insert_post($my_post);
-		add_option('BW_link', 'http://www.bukmekerskajakontora.ru/go/wh2');
+		add_option('bw_link_top', Stakes::get_func_links('top'));
+		add_option('bw_link_sport', Stakes::get_func_links('sport'));
 		add_option('BW_permalink_id', $id_post);
 		add_option('BW_date_sport', 'none');
 		add_option('BW_sport_cat', 'all');
 		add_option('BW_top_widget_cat', 'all');
 		add_option('BW_show_link', 'close');
 		add_option('BW_ab_link', 'a_45206b_23447');
-		add_option('BW_ab_lang', 'ru');
+		add_option('BW_ab_lang', Stakes::get_func_lang());
 		add_option('BW_table_active', 'item');
 		add_option('BW_progress', 'copmplite');
-
+		add_option('BW_Lang', WPLANG);
+		add_option('BW_current_date', date("Ymd"));
 		$table_name = $wpdb->prefix . "bw_category";
 		$sql = "CREATE TABLE IF NOT EXISTS " . $table_name . " (
         		  ID_category  int(11) NOT NULL,
@@ -135,36 +137,49 @@ class Stakes {
 	public function bw_unset_options() {
 
 		wp_delete_post(get_option('BW_permalink_id'));
-
-		if (deleteOptions('BW_link', 'BW_permalink_id', 'BW_progress', 'BW_ab_link', 'BW_ab_lang', 'BW_table_active', 'BW_date_sport', 'BW_show_link', 'BW_sport_cat', 'BW_top_widget_cat'))
-			echo 'Settings have been cleared!';
-		else
-			echo 'Erasing caused the error. Setup failed to remove!';
+		delete_option('BW_link');
+		delete_option('BW_permalink_id');
+		delete_option('BW_current_date');
+		delete_option('BW_Lang');
+		delete_option('bw_link_top');
+		delete_option('BW_progress');
+		delete_option('BW_ab_link');
+		delete_option('BW_ab_lang');
+		delete_option('BW_table_active');
+		delete_option('BW_date_sport');
+		delete_option('BW_show_link');
+		delete_option('BW_sport_cat');
+		delete_option('BW_top_widget_cat');
+		delete_option('bw_link_sport');
+		delete_option('BW_item_count');
 	}
 
 	public function bw_main_page() {
 		?>
 		<div class="wrap">
 			<h2>
-				<img height="32" width="32" src="<?php echo BW_IMAGES ?>am_foot_big.png"/>   Stakes Plugin
+				<img height="32" width="32" src="<?php echo BW_IMAGES ?>am_foot_big.png"/>Stakes Plugin
 			</h2>
 			<div class="bw_section">
 
 				<ul class="tabs">
-					<li class="current">Главная</li>
-					<li>( Stakes Widget Top ) Верхний виджет</li>
-					<li>( Stakes Widget Sports ) Боковой виджет</li>
+					<li class="current"><?php _e('Home', 'bet-on-sports'); ?></li>
+					<li><?php _e('( Stakes Widget Top ) Upper widget', 'bet-on-sports'); ?></li>
+					<li><?php _e('( Stakes Widget Sports ) Side widget', 'bet-on-sports'); ?></li>
+					<li><?php _e('Settings', 'bet-on-sports'); ?></li>
 				</ul>
 
 				<div class="box visible">
-		<?php self::load_tab('admin_widget_home'); ?>
+					<?php self::load_tab('admin_widget_home'); ?>
 				</div>
-
 				<div class="box">
 					<?php self::load_tab('admin_widget_top'); ?>
 				</div>
 				<div class="box">
-		<?php self::load_tab('admin_widget_results'); ?>
+					<?php self::load_tab('admin_widget_results'); ?>
+				</div>
+				<div class="box">
+					<?php self::load_tab('admin_widget_options'); ?>
 				</div>
 			</div>
 		</div>
@@ -197,8 +212,110 @@ class Stakes {
 		wp_enqueue_script('main', BW_JS . 'main.js', '', '', true);
 	}
 
-	public function bw_func_carusel() {
-		
+	public function get_func_links($string) {
+		if ($string == 'top') {
+			if (WPLANG == 'ru_RU') {
+				$link = 'http://www.bukmekerskajakontora.ru/go/wh2_ru';
+			} elseif (WPLANG == 'en_US') {
+				$link = 'http://www.bukmekerskajakontora.ru/go/wh2_en';
+			} elseif (WPLANG == 'de_DE') {
+				$link = 'http://www.bukmekerskajakontora.ru/go/wh2_de';
+			} elseif (WPLANG == 'it_IT') {
+				$link = 'http://www.bukmekerskajakontora.ru/go/wh2_it';
+			} elseif (WPLANG == 'es_ES') {
+				$link = 'http://www.bukmekerskajakontora.ru/go/wh2_es';
+			} elseif (WPLANG == 'pt_PT') {
+				$link = 'http://www.bukmekerskajakontora.ru/go/wh2_pt';
+			} elseif (WPLANG == 'cs_CZ') {
+				$link = 'http://www.bukmekerskajakontora.ru/go/wh2_cs';
+			}
+			return $link;
+		}
+		if ($string == 'sport') {
+			if (WPLANG == 'ru_RU') {
+				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_23462&aid=';
+			} elseif (WPLANG == 'en_US') {
+				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_23453&aid=';
+			} elseif (WPLANG == 'de_DE') {
+				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_23448&aid=';
+			} elseif (WPLANG == 'it_IT') {
+				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_23453&aid=';
+			} elseif (WPLANG == 'es_ES') {
+				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_26633&aid=';
+			} elseif (WPLANG == 'pt_PT') {
+				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_26633&aid=';
+			} elseif (WPLANG == 'cs_CZ') {
+				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_23730&aid=';
+			}
+			return $link;
+		}
+		if ($string == 'btag') {
+			if (WPLANG == 'ru_RU') {
+				$link = 'a_45206b_23462';
+			} elseif (WPLANG == 'en_US') {
+				$link = 'a_45206b_23453';
+			} elseif (WPLANG == 'de_DE') {
+				$link = 'a_45206b_23448';
+			} elseif (WPLANG == 'it_IT') {
+				$link = 'a_45206b_23453';
+			} elseif (WPLANG == 'es_ES') {
+				$link = 'a_45206b_26633';
+			} elseif (WPLANG == 'pt_PT') {
+				$link = 'a_45206b_26633';
+			} elseif (WPLANG == 'cs_CZ') {
+				$link = 'a_45206b_23730';
+			}
+			return $link;
+		}
+				if ($string == 'ref') {
+			if (WPLANG == 'ru_RU') {
+				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_30968&aid=';
+			} elseif (WPLANG == 'en_US') {
+				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_31115&aid=';
+			} elseif (WPLANG == 'de_DE') {
+				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_31131&aid=';
+			} elseif (WPLANG == 'it_IT') {
+				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_32485&aid=';
+			} elseif (WPLANG == 'es_ES') {
+				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_30938&aid=';
+			} elseif (WPLANG == 'pt_PT') {
+				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_30938&aid=';
+			} elseif (WPLANG == 'cs_CZ') {
+				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_30327&aid=';
+			}
+			return $link;
+		}
+	}
+
+	public function get_func_lang() {
+		if (WPLANG == 'ru_RU') {
+			$lang = 'ru';
+		} elseif (WPLANG == 'en_US') {
+			$lang = 'en';
+		} elseif (WPLANG == 'de_DE') {
+			$lang = 'de';
+		} elseif (WPLANG == 'it_IT') {
+			$lang = 'it';
+		} elseif (WPLANG == 'es_ES') {
+			$lang = 'es';
+		} elseif (WPLANG == 'pt_PT') {
+			$lang = 'pt';
+		} elseif (WPLANG == 'cs_CZ') {
+			$lang = 'cz';
+		}
+		return $lang;
+	}
+
+	public function get_func_day() {
+		if (date('l') == 'Wednesday') {
+			if (date("Ymd") != get_option('BW_current_date')) {
+				update_option('BW_ab_link', Stakes::get_func_links('btag'));
+				update_option('BW_ab_lang', Stakes::get_func_lang());
+				update_option('bw_link_sport', Stakes::get_func_links('sport'));
+				update_option('bw_link_top', Stakes::get_func_links('top'));
+				update_option('BW_current_date',  date("Ymd"));
+			}
+		}
 	}
 
 }

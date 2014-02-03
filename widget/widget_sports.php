@@ -7,7 +7,7 @@ class Bw_sports_widget extends WP_Widget {
 		parent::__construct(
 			'Bw_sports_widget', // идентификатор виджета
 			'Stakes Widget Sports', // название виджета
-			array('description' => 'Stakes Widget Sports - Выводит список турниров в виде дерева') // Опции
+			array('description' => __('Stakes Widget Sports - shows the list of tournaments in the form of tree','bet-on-sports')) // Опции
 		);
 	}
 
@@ -46,7 +46,7 @@ class Bw_sports_widget extends WP_Widget {
 		echo '<ul >';
 		foreach ($res as $dat) {
 			if ($dat->trans_sport != '') {
-				echo "<li><div class='openSub first_ul'><img src='" . get_option('siteurl') . "/wp-content/plugins/bet-on-sports/images/sports/" . $dat->trans_sport . ".png' width='16'><span class='bw-title'>{$dat->name_sport}</span></div>";
+				echo "<li><div class='openSub first_ul'><img src='" . get_option('siteurl') . "/wp-content/plugins/bet-on-sports/images/sports/" . get_option('BW_Lang') .'/'. $dat->trans_sport . ".png' width='16'><span class='bw-title'>{$dat->name_sport}</span></div>";
 				echo '<ul class="second_ul" style="display:none;">';
 				foreach ($res2 as $dat2) {
 
@@ -68,16 +68,6 @@ class Bw_sports_widget extends WP_Widget {
 		}
 		echo '</ul>';
 		
-		/* bukmeker only */
-		echo "<script>
-			jQuery(document).ready(function($) {
-				//$('#sidebar-wrapper').isotope('destroy');
-				$('#sidebar-wrapper').removeClass('isotope');
-				$('#sidebar-wrapper').removeAttr('style');
-			});
-		</script>";
-		
-		/* bukmeker only */
 
 		$url = explode("/", get_bloginfo('url'));
 		$uri = ($url[3]) ? '/' . $url[3] . '/' : '/';
@@ -103,7 +93,7 @@ class Bw_sports_widget extends WP_Widget {
 	public function form($instance) {
 		// Название виджета
 		?><p>
-			<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Название:', 'example'); ?></label>
+			<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('The title', 'bet-on-sports'); ?></label>
 			<input id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" value="<?php echo $instance['title']; ?>" style="width:100%;" />
 		</p><?php
 	}

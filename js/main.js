@@ -44,6 +44,14 @@
 		$(this).toggleClass('first-hover');
 	});
 
+	$(window).keydown(function(e) {
+      if (e.which == 39) {
+         if (e.ctrlKey){ console.log('right'); }
+      }
+      if (e.which == 37) {
+         if (e.ctrlKey){ console.log('left'); }
+      }
+   });
 
 })(jQuery)
 

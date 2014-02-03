@@ -7,6 +7,8 @@ if ($rr[1] == 'wp-admin') {
 	$url = '/' . $rr[1] . '/';
 }
 
+
+
 define('BW_ABSPATH', dirname(__FILE__) . '/');
 define('BW', 'wp-content/plugins/bet-on-sports/');
 define('BW_WIDGET', 'wp-content/plugins/bet-on-sports/widget/');

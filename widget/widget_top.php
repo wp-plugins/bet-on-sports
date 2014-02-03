@@ -7,7 +7,7 @@ class Bw_top_widget extends WP_Widget {
 		parent::__construct(
 			'Bw_top_widget', // идентификатор виджета
 			'Stakes Widget Top', // название виджета
-			array('description' => 'Stakes Widget Top - Выводит список основных ставок в виде слайдера со вкладками') // Опции
+			array('description' => __('Stakes Widget Top - shows the list of common stakes in the form of slider with tab cards','bet-on-sports')) // Опции
 		);
 	}
 
@@ -39,7 +39,10 @@ class Bw_top_widget extends WP_Widget {
 		$res = $wpdb->get_results("SELECT * FROM $sport_table  $WHERES ORDER BY `ID_sport` ");
 		$res2 = $wpdb->get_results("SELECT * FROM $cat_table   $WHERES ORDER BY `name_cat` "); //JOIN $sport_table ON `$cat_table`.`ID_sport`=`$sport_table`.`ID_sport` ORDER BY `$cat_table`.`ID_sport`
 		$res3 = $wpdb->get_results("SELECT * FROM $tourn_table ORDER BY `name_tourn` ");
-		$results = $wpdb->get_results("SELECT * FROM `$item_table`  $WHERE  `betType`='Основная ставка' ORDER BY `ID_sport` ");
+		$param = Bw_shortcode::get_arr_name();
+		$tip = $param['Tip'];
+		
+		$results = $wpdb->get_results("SELECT * FROM `$item_table`  $WHERE  `betType`='$tip' ORDER BY `ID_sport` ");
 		foreach ($results as $data) {
 			//preg_match('#<OddsType betTypeId="(.+?)" oddType="(.+?)" betTypeGroup="(.+?)" defaultName="(.+?)" groupName="(.+?)" betName="(.+?)">(.+?)</OddsType>#is', $data->text, $_OddsType);
 			preg_match('#<OddsData>(.+?)</OddsData>#is', $data->text, $OddsData);
@@ -96,7 +99,7 @@ class Bw_top_widget extends WP_Widget {
 					foreach ($data['compitention'] as $value) {
 						?>
 						<div class="bw-block">
-							<a href="<?php echo get_option('BW_link'); ?>">
+							<a href="<?php echo get_option('bw_link_top'); ?>">
 								<span class="bw-score-status">16/12 12:00</span>
 								<div class="bw-score-teams">
 									<?php echo $value['home']; ?><br><?php echo $value['away']; ?>

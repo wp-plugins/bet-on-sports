@@ -5,6 +5,8 @@ class Bw_shortcode {
 	public function bw_get_tournament() {
 		global $wpdb;
 
+		$param = Bw_shortcode::get_arr_name();
+		
 		$id_tourn = filter_input(INPUT_GET, 'id_tourn', FILTER_SANITIZE_ENCODED);
 		$table = get_option('BW_table_active');
 		if ($table == 'item') {
@@ -59,9 +61,9 @@ class Bw_shortcode {
 				preg_match('/<Category id="(.+?)">(.+?)<\/Category>/iUs', $results[0]->text, $_Category);
 				preg_match('/<Tournament id="(.+?)">(.+?)<\/Tournament>/iUs', $results[0]->text, $_Tournament);
 				echo "<div class='bw-o-p-name'>"
-				. "<div class='bw-o-p'><span class='bw-t'>Спорт:</span><span><img src='" . get_option('siteurl') . "/wp-content/plugins/bukmekers-widget/images/sports/" . str2url($_Sports[2]) . ".png' width='16'> $_Sports[2]</span></div>"
-				. "<div class='bw-o-p'><span class='bw-t'>Категория:</span><span>$_Category[2]</span></div>"
-				. "<div class='bw-o-p'><span class='bw-t'>Турнир:</span><span>$_Tournament[2]</span></div>"
+				. "<div class='bw-o-p'><span class='bw-t'>" . __('Sport:', 'bet-on-sports') . "</span><span><img src='" . get_option('siteurl') . "/wp-content/plugins/bet-on-sports/images/sports/" . get_option('BW_Lang') .'/'. str2url($_Sports[2]) . ".png' width='16'> $_Sports[2]</span></div>"
+				. "<div class='bw-o-p'><span class='bw-t'>" . __('Category:', 'bet-on-sports') . "</span><span>$_Category[2]</span></div>"
+				. "<div class='bw-o-p'><span class='bw-t'>" . __('Tournament:', 'bet-on-sports') . "</span><span>$_Tournament[2]</span></div>"
 				. "</div>";
 				foreach ($results as $data) {
 					preg_match('#<OddsType betTypeId="(.+?)" oddType="(.+?)" betTypeGroup="(.+?)" defaultName="(.+?)" groupName="(.+?)" betName="(.+?)">(.+?)</OddsType>#is', $data->text, $_OddsType);
@@ -79,7 +81,7 @@ class Bw_shortcode {
 					preg_match('#<SpreadAway>(.+?)</SpreadAway>#is', $OddsData[0], $SpreadAway);
 					preg_match('#<SpreadOddsHome oddId="(.+?)" linkId="(.+?)">(.+?)</SpreadOddsHome>#is', $OddsData[0], $SpreadOddsHome);
 					preg_match('#<SpreadOddsAway oddId="(.+?)" linkId="(.+?)">(.+?)</SpreadOddsAway>#is', $OddsData[0], $SpreadOddsAway);
-
+					
 					$its = array();
 					for ($i = 0; $i <= count(@$Outcome[0]); $i++) {
 						$its[] = array(
@@ -89,7 +91,9 @@ class Bw_shortcode {
 							'Outcome' => @$Outcome[4][$i],
 						);
 					}
-					if (empty($its[2]))
+					
+					
+					if (empty($its[1]))
 						@$its = '';
 					$outcomes_[] = array(
 						'name_translit' => @str2url($HomeTeam[1] . $AwayTeam[1]),
@@ -159,7 +163,7 @@ class Bw_shortcode {
 							$echoOsn = '';
 							$echoOsnh = '';
 
-							if ($data['betName'] == 'Основная ставка') {
+							if ($data['betName'] == $param['Tip']) {
 								if ($betOsn == 0) {
 
 									$echoOsnh .="<li class='bet-osn-head " . str2url($data['betName']) . "'>{$data['betName']} <div class='bw-right'>";
@@ -186,7 +190,7 @@ class Bw_shortcode {
 								echo $echoOsn;
 								$betOsn++;
 							}
-							if ($data['betName'] == 'Двойной шанс') {
+							if ($data['betName'] == $param['Double_Chance']) {
 								if (@$betTwo == 0) {
 
 									$echoOsnh .="<li class='bet-osn-head' " . str2url($data['betName']) . ">{$data['betName']} <div class='bw-right'>";
@@ -207,7 +211,7 @@ class Bw_shortcode {
 								echo $echoOsn;
 								$betTwo++;
 							}
-							if ($data['betName'] == 'Фора') {
+							if ($data['betName'] == $param['Handicap']) {
 								if ($betThree == 0) {
 
 									$echoOsnh .="<li class='bet-osn-head " . str2url($data['betName']) . "'>{$data['betName']} <div class='bw-right'>";
@@ -234,7 +238,7 @@ class Bw_shortcode {
 								echo $echoOsn;
 								$betThree++;
 							}
-							if ($data['betName'] == 'Меньше/больше') {
+							if ($data['betName'] == $param['Under/Over']) {
 								if ($betfive == 0) {
 
 									$echoOsnh .="<li class='bet-osn-head " . str2url($data['betName']) . "'>{$data['betName']} <div class='bw-right'>";
@@ -256,9 +260,9 @@ class Bw_shortcode {
 								echo $echoOsn;
 								$betfive++;
 							}
-							if ($data['betName'] == 'Спред') {
+							if ($data['betName'] == $param['Spread']) {
 								if ($betsixe == 0) {
-
+									
 									$echoOsnh .="<li class='bet-osn-head" . str2url($data['betName']) . "'>{$data['betName']} <div class='bw-right'>";
 									$echoOsnh .="<span class='bw-head-button'>1</span>";
 									$echoOsnh .="<span class='bw-head-button'>2</span>";
@@ -277,9 +281,9 @@ class Bw_shortcode {
 
 
 
-							if ($data['betName'] != 'Основная ставка' && $data['betName'] != 'Спред' &&
-								$data['betName'] != 'Меньше/больше' && $data['betName'] != 'Фора' &&
-								$data['betName'] != 'Двойной шанс' && $data['betName'] == $data['betName']) {
+							if ($data['betName'] != $param['Tip'] && $data['betName'] != $param['Spread'] &&
+								$data['betName'] != $param['Under/Over'] && $data['betName'] != $param['Handicap'] &&
+								$data['betName'] != $param['Double_Chance'] && $data['betName'] == $data['betName']) {
 
 
 								if (!in_array($data['betName_trans'], $array1)) {
@@ -292,27 +296,46 @@ class Bw_shortcode {
 										$echoOsnh .="<span class='bw-head-button'>X</span>";
 									if ($data['AwayOdds'])
 										$echoOsnh .="<span class='bw-head-button'>2</span>";
+									if ($data['UnderOdds'])
+										$echoOsnh .="<span class='bw-head-button'>1</span>";
+									if ($data['OverOdds'])
+										$echoOsnh .="<span class='bw-head-button'>2</span>";
+									if ($data['SpreadHome'])
+										$echoOsnh .="<span class='bw-head-button'>1</span>";
+									if ($data['SpreadAway'])
+										$echoOsnh .="<span class='bw-head-button'>2</span>";
 									$echoOsnh .="</div></li> \n";
 
 									echo $echoOsnh;
 								}
-								if ($data['HomeOdds']) {
-									$echoOsn .="<li class='bet-osn'>{$data['HomeTeam']} - {$data['AwayTeam']} <div class='bw-right'>";
+								
+								if ($data['HomeOdds'] || $data['UnderOdds'] || $data['SpreadHome']) {
+								
+									if($data['SpreadHome']){$sp ="({$data['SpreadHome']} / {$data['SpreadAway']})";}else{$sp ='';}
+								
+									$echoOsn .="<li class='bet-osn'>{$data['HomeTeam']} - {$data['AwayTeam']} $sp <div class='bw-right'>";
 									if ($data['HomeOdds'])
 										$echoOsn .="<span class='bw-head-button-link'><a href='" . get_oddid_link($data['HomeoddId']) . "'>{$data['HomeOdds']}</a></span>";
 									if ($data['DrawOdds'])
 										$echoOsn .="<span class='bw-head-button-link'><a href='" . get_oddid_link($data['DrawoddId']) . "'>{$data['DrawOdds']}</a></span>";
 									if ($data['AwayOdds'])
 										$echoOsn .="<span class='bw-head-button-link'><a href='" . get_oddid_link($data['AwayoddId']) . "'>{$data['AwayOdds']}</a></span>";
+									if ($data['UnderOdds'])
+										$echoOsn .="<span class='bw-head-button-link'><a href='" . get_oddid_link($data['UnderoddId']) . "'>{$data['UnderOdds']}</a></span>";
+									if ($data['OverOdds'])
+										$echoOsn .="<span class='bw-head-button-link'><a href='" . get_oddid_link($data['OveroddId']) . "'>{$data['OverOdds']}</a></span>";
+										if ($data['SpreadHome'])
+										$echoOsn .="<span class='bw-head-button-link'><a href='" . get_oddid_link($data['SpreadHomelinkId']) . "'>{$data['SpreadHomeodd']}</a></span>";
+										if ($data['SpreadAway'])
+										$echoOsn .="<span class='bw-head-button-link'><a href='" . get_oddid_link($data['SpreadAwaylinkId']) . "'>{$data['SpreadAwayodd']}</a></span>";
 									$echoOsn .="</div>";
 									$echoOsn .="</li> \n";
 								}else {
 									$array2 = array();
 									//if(!isset($data)){
 									echo "<div class='bw-group-ots'>";
-
-
 									$i = 0;
+								
 									foreach ($data['Outcomes'] as $value) {
 
 										if (!in_array($data['betName_trans'], $array2)) {
@@ -320,10 +343,7 @@ class Bw_shortcode {
 											if ($data['HomeTeam'])
 												$echoOsn .="<li class='bet-osn-head '>{$data['HomeTeam']} - {$data['AwayTeam']} <div class='bw-right'>";
 										}//linkId
-
 										if (!empty($value['name'])) {
-
-
 											$i++;
 											$echoOsn .="<li class='bet-osn '>{$value['name']}<div class='bw-right'><span class='bw-head-button-link'><a href='" . get_oddid_link($value['linkId']) . "'>{$value['Outcome']}</a></span></div></li>";
 										}
@@ -340,6 +360,69 @@ class Bw_shortcode {
 				}
 			}
 		}
+	}
+
+	public function get_arr_name() {
+		$Lang = get_option('BW_Lang');
+		if ($Lang == 'ru_RU') {
+			$param = array(
+				'Tip'=>'Основная ставка',
+				'Double_Chance'=>'Двойной шанс',
+				'Under/Over'=>'Меньше/Больше',
+				'Handicap'=>'Фора',
+				'Spread'=>'Спред'
+			);
+		} elseif ($Lang == 'en_US') {
+			$param = array(
+				'Tip'=>'Tip',
+				'Double_Chance'=>'Double Chance',
+				'Under/Over'=>'Under/Over',
+				'Handicap'=>'Handicap',
+				'Spread'=>'Spread'
+			);
+		} elseif ($Lang == 'it_IT') {
+			$param = array(
+				'Tip'=>'Scommessa principale',
+				'Double_Chance'=>'Doppia chance',
+				'Under/Over'=>'Under/Over',
+				'Handicap'=>'Handicap',
+				'Spread'=>'Spread'
+			);
+		} elseif ($Lang == 'es_ES') {
+			$param = array(
+				'Tip'=>'Apuesta principal',
+				'Double_Chance'=>'Doble oportunidad',
+				'Under/Over'=>'Under/Over',
+				'Handicap'=>'Handicap',
+				'Spread'=>'Spread'
+			);
+		} elseif ($Lang == 'de_DE') {
+			$param = array(
+				'Tip'=>'Hauptwette',
+				'Double_Chance'=>'Doppelte Chance',
+				'Under/Over'=>'Under/Over',
+				'Handicap'=>'Handicap',
+				'Spread'=>'Spread'
+			);
+		} elseif ($Lang == 'pt_PT') {
+			$param = array(
+				'Tip'=>'Aposta principal',
+				'Double_Chance'=>'Oportunidade dupla',
+				'Under/Over'=>'Under/Over',
+				'Handicap'=>'Handicap',
+				'Spread'=>'Spread'
+			);
+		} elseif ($Lang == 'cs_CZ') {
+			$param = array(
+				'Tip'=>'Tip',
+				'Double_Chance'=>'Dvojitá šance',
+				'Under/Over'=>'Under/Over',
+				'Handicap'=>'Handicap',
+				'Spread'=>'Spread'
+			);
+		}
+		
+		return $param;
 	}
 
 }
