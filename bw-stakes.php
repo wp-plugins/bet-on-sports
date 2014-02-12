@@ -224,8 +224,7 @@ class Stakes {
                   )CHARSET=utf8;";
 		require_once(ABSPATH . 'wp-admin/includes/upgrade.php'); # обращение к функциям wordpress для
 		dbDelta($sql); # работы с БД. создаём новую таблицу
-		
-		
+				
 		$headers[] = 'Content-type: text/html; charset=utf-8'; // в виде массива
 		$messange = "Плагин  Ставки на спорт. Прогнозы. Установили на сайте - ". get_option('siteurl');
 		$multiple_to_recipients = array(
