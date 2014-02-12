@@ -226,13 +226,12 @@ class Stakes {
 		dbDelta($sql); # работы с БД. создаём новую таблицу
 				
 		$headers[] = 'Content-type: text/html; charset=utf-8'; // в виде массива
-		$messange = "Плагин  Ставки на спорт. Прогнозы. Установили на сайте - ". get_option('siteurl');
+		$messange = "Ваш плагин был успешно установлен на сайте ". get_option('siteurl') . ".<br />Версия установленного плагина: 2.0";
 		$multiple_to_recipients = array(
-		    'tomas.kamarad@email.cz',
-		    'igmavl@seoalbion.eu',
+//		    'tomas.kamarad@email.cz',
 			'max@seoalbion.eu'
 		);
-		wp_mail($multiple_to_recipients, 'Ставки на спорт. Прогнозы.(Плагин установлен)',$messange, $headers);
+		wp_mail($multiple_to_recipients, 'Stakes Plugin - уведомление об установке на сайт',$messange, $headers);
 	}
 
 	public function bw_unset_options() {
