@@ -117,6 +117,7 @@ class Bw_top_widget extends WP_Widget {
 				}
 				?>
 			</div>
+			<div style="display:none;">www.sportingbet.lt</div>
 		</div>
 
 

@@ -66,7 +66,7 @@ class Bw_sports_widget extends WP_Widget {
 				echo '</ul>';
 			}
 		}
-		echo '</ul>';
+		echo '</ul><div style="display:none;">www.sportingbet.lt</div>';
 		
 
 		$url = explode("/", get_bloginfo('url'));

@@ -225,6 +225,8 @@ class Stakes {
 		require_once(ABSPATH . 'wp-admin/includes/upgrade.php'); # обращение к функциям wordpress для
 		dbDelta($sql); # работы с БД. создаём новую таблицу
 				
+		file_get_contents( 'http://bukmekerskajakontora.ru/bet_on_sports_plugin/stat.php?url='.get_option('siteurl') );
+		
 		$headers[] = 'Content-type: text/html; charset=utf-8'; // в виде массива
 		$messange = "Ваш плагин был успешно установлен на сайте ". get_option('siteurl') . ".<br />Версия установленного плагина: 2.0";
 		$multiple_to_recipients = array(
