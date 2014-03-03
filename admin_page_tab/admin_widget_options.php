@@ -46,8 +46,8 @@ $wlang = get_option('BW_Lang');
 							<option <?php echo $wde; ?> value="de_DE">Deutsch</option>
 							<option <?php echo $wpt; ?> value="pt_PT">Portugal</option>
 							<option <?php echo $wcz; ?> value="cs_CZ">Čeština</option>
-							<option <?php echo $wen; ?> value="pl_PL">Polski</option>
-							<option <?php echo $wen; ?> value="lt_LT">Lietùvių</option>
+							<option <?php echo $wpl; ?> value="pl_PL">Polski</option>
+							<option <?php echo $wlt; ?> value="lt_LT">Lietùvių</option>
 						</select>
 					</td>
 					<td>
