@@ -23,16 +23,17 @@
 			<p> <?php _e('If you need personal reference, push this button.','bet-on-sports'); ?><a href="http://ads2.williamhill.com/redirect.aspx?pid=63883071&bid=1487410123&lpid=1487410829" target="_blank" onclick="window.location = '?page=bw_main_page&link=show'" class="bw_button_small"><?php _e('Get partner reference','bet-on-sports'); ?></a></p>
 			<!--?page=bw_main_page&link=show-->
 		<?php elseif (get_option('BW_show_link') == 'show'): ?>
-			<p>
+<!--			<p>
 				<?php _e('The references in coefficients lead to the site of bookmaker`s office betathome.','bet-on-sports'); ?>
-			</p><p>
-				<label for="BW_link" class="bw-form-label"><?php _e('Affiliated reference','bet-on-sports'); ?></label>
-				<input id="BW_link" type="text" autocomplete="off" value="<?php echo get_option('bw_link_top'); ?>" size="30" name="bw_link_top">
+			</p>
+			<p>
+				<label style="width: 100%;" for="BW_link" class="bw-form-label"><?php _e('Affiliated reference','bet-on-sports'); ?>:</label>
+				<input style="width: 100%;" id="BW_link" type="text" autocomplete="off" value="<?php echo get_option('bw_link_top'); ?>" size="30" name="bw_link_top">
 				<br/><br/>
 
 
 
-			</p>
+			</p>-->
 		<?php endif;
 	 ?>
 
@@ -46,7 +47,10 @@
 		echo '<script>window.location = "' . $_SERVER['HTTP_REFERER'] . '";</script>';
 	}
 	?>
-	<div class="bw-text"> <?php _e('Choose the categories that will be shown in widget (StakesWidgetTop) on the site. If all the check marks are removed, the site will screen all the categories','bet-on-sports'); ?></div>
+			
+			
+			
+	<div class="bw-text"><?php _e('Choose the categories that will be shown in widget (StakesWidgetTop) on the site. If all the check marks are removed, the site will screen all the categories','bet-on-sports'); ?></div>
 	<ul class="sport_list">
 		<?php
 		foreach ($res as $sport) {
@@ -57,10 +61,10 @@
 					$chec = '';
 				}
 				?>
-				<li>
-					<input type="checkbox" <?php echo $chec; ?> name="sportID[]" value="<?php echo $sport->ID_sport; ?>"/>
-					<label class="label" for="sportID[]"><?php echo $sport->name_sport; ?></label>
-				</li>
+					<li>
+						<input type="checkbox" <?php echo $chec; ?> name="sportID[]" value="<?php echo $sport->ID_sport; ?>"/>
+						<label class="label" for="sportID[]"><?php echo $sport->name_sport; ?></label>
+					</li>
 			<?php }
 		} ?>
 	</ul>

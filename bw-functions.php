@@ -94,3 +94,13 @@ function get_oddid_link($oddID) {
 
 	return $link;
 }
+
+function get_afil_link() {
+
+	@$link .= 'https://affiliates.bet-at-home.com/processing/clickthrgh.asp?';
+	$link .= 'btag=' . get_option('BW_ab_link');
+	$link .= '&lang=' . get_option('BW_ab_lang');
+
+
+	return $link;
+}

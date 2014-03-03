@@ -99,7 +99,7 @@ class Bw_top_widget extends WP_Widget {
 					foreach ($data['compitention'] as $value) {
 						?>
 						<div class="bw-block">
-							<a href="<?php echo get_option('bw_link_top'); ?>">
+							<a href="<?php echo get_afil_link(); ?>">
 								<span class="bw-score-status">16/12 12:00</span>
 								<div class="bw-score-teams">
 									<?php echo $value['home']; ?><br><?php echo $value['away']; ?>

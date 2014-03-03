@@ -21,7 +21,7 @@
 		<br/><br/>
 		<label for="BW_ab_lang" class="bw-form-label"><?php _e('Your Language','bet-on-sports'); ?></label>
 		<input id="BW_ab_lang" type="text" autocomplete="off" value="<?php echo get_option('BW_ab_lang'); ?>" size="30" name="BW_ab_lang">
-		en, ru, it, es, de , pt
+		en, ru, it, es, de, pt, pl, lt
 
 		</p>
 	<?php endif; ?>

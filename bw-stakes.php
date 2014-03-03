@@ -14,21 +14,7 @@ class Stakes {
 	}
 	public function get_func_links($string) {
 		if ($string == 'top') {
-			if (WPLANG == 'ru_RU') {
-				$link = 'http://www.bukmekerskajakontora.ru/go/wh2_ru';
-			} elseif (WPLANG == 'en_US') {
-				$link = 'http://www.bukmekerskajakontora.ru/go/wh2_en';
-			} elseif (WPLANG == 'de_DE') {
-				$link = 'http://www.bukmekerskajakontora.ru/go/wh2_de';
-			} elseif (WPLANG == 'it_IT') {
-				$link = 'http://www.bukmekerskajakontora.ru/go/wh2_it';
-			} elseif (WPLANG == 'es_ES') {
-				$link = 'http://www.bukmekerskajakontora.ru/go/wh2_es';
-			} elseif (WPLANG == 'pt_PT') {
-				$link = 'http://www.bukmekerskajakontora.ru/go/wh2_pt';
-			} elseif (WPLANG == 'cs_CZ') {
-				$link = 'http://www.bukmekerskajakontora.ru/go/wh2_cs';
-			}
+			$link = 'http://www.bukmekerskajakontora.ru/go/wh2';
 			return $link;
 		}
 		if ($string == 'sport') {
@@ -67,7 +53,7 @@ class Stakes {
 			}
 			return $link;
 		}
-				if ($string == 'ref') {
+		if ($string == 'ref') {
 			if (WPLANG == 'ru_RU') {
 				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_30968&aid=';
 			} elseif (WPLANG == 'en_US') {
