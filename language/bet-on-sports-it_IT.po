@@ -1,0 +1,218 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: bet on sports  2\n"
+"POT-Creation-Date: 2014-01-31 09:43+0200\n"
+"PO-Revision-Date: 2014-01-31 10:13+0200\n"
+"Last-Translator: SEOAlbion <igmavl@seoalbion.eu>\n"
+"Language-Team: SEOAlbion <igmavl@seoalbion.eu>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: C:\\Users\\test\\Documents\\NetBeansProjects\\bm1\\www"
+"\\premium-restyle.ru\\wp-test\\wp-content\\plugins\\bet-on-sports\n"
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/bw-shortcode.php:64
+msgid "Sport:"
+msgstr "Sport:"
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/bw-shortcode.php:65
+msgid "Category:"
+msgstr "Categoria:"
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/bw-shortcode.php:66
+msgid "Tournament:"
+msgstr "Torneo:"
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/bw-stakes.php:33
+msgid "Tournament"
+msgstr "Torneo"
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/bw-stakes.php:154
+msgid "Home"
+msgstr "Home"
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/bw-stakes.php:155
+msgid "( Stakes Widget Top ) Upper widget"
+msgstr "(Widget Giocate Top ) Widget superiore"
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/bw-stakes.php:156
+msgid "( Stakes Widget Sports ) Side widget"
+msgstr "(Widget Giocate Sport ) Widget laterale"
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/bw-stakes.php:157
+msgid "Settings"
+msgstr "Impostazioni"
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_home.php:1
+msgid "Good afternoon"
+msgstr "Buon pomeriggio"
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_home.php:2
+msgid ""
+"The plug-in gives shows in widgets the actual coefficients for consecutive "
+"sport events. The references in coefficients lead to the site of bookmaker`s "
+"office betathome."
+msgstr ""
+"Il plugin mostra nei widget i coefficenti reali per eventi sportivi "
+"consecutivi. I riferimetni nei coefficenti conducono al sito dell’ufficio "
+"del bookmaker betathome."
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_home.php:5
+msgid ""
+"If you register at the site bet-at-home.com, you will be able to participate "
+"in the referral system"
+msgstr ""
+"Se ti registry sul sito bet-at-home.com, avrai la posibilità di partecipare "
+"al sistema di referral"
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_home.php:6
+msgid "get the partner reference"
+msgstr "Ottieni il riferimento partner"
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_home.php:10
+msgid ""
+"To alter the ID from current one to your own. <b>You have to become a "
+"partner bet-at-home.com </b>"
+msgstr ""
+"Per modifi9care l’ID da quello attuale al tuo. <b>Devi diventare partner di "
+"bet-at-home.com </b>"
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_home.php:11
+msgid "For this purpose you should:"
+msgstr "A questo scopo dovrsti:"
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_home.php:13
+msgid "Register"
+msgstr "Registrarti"
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_home.php:14
+msgid "Get your ID and paste it into \"Your ID\" field"
+msgstr "Ottenere il tuo ID ed incollarlo nel campo \"Il Tuo ID\""
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_home.php:15
+msgid ""
+"Get affiliated reference and paste it into the following tab (the upper "
+"widget) in the \"Affiliated reference\" field"
+msgstr ""
+" Ottenere un riferimento affiliate ed incollarlo nella scheda seguente ( il "
+"widget superiore) nel campo \"Riferimetno affiliato\""
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_home.php:16
+msgid "Earn money with us staying at home."
+msgstr "Guadagna denaro con noi da casa tua."
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_home.php:19
+msgid "Your ID"
+msgstr "Il Tuo ID"
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_home.php:22
+msgid "Your Language"
+msgstr "La Tua Lingua"
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_home.php:30
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_options.php:57
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_results.php:38
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_top.php:67
+msgid "Save"
+msgstr "Salva"
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_home.php:33
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_options.php:50
+msgid "Renew the data"
+msgstr "Rinnova i dati"
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_home.php:34
+msgid "Restore standard settings"
+msgstr "Ripristina impostazioni standard"
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_options.php:25
+msgid "Setting name"
+msgstr "Nome dell’impostazione "
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_options.php:26
+msgid "Setting"
+msgstr "Impostazione"
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_options.php:27
+msgid "Comment"
+msgstr "Commento"
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_options.php:30
+msgid "Language output"
+msgstr "Lingua dei dati di output "
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_options.php:43
+msgid "Language in which widgets are displayed on the site."
+msgstr ""
+"Lingua che sarà utilizzata per mostrare il contenuto dei widget su questo "
+"sito "
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_options.php:44
+msgid "Language in which the data will be taken from the server."
+msgstr "Lingua che sarà utilizzata per ottenere dati dal server"
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_options.php:49
+msgid "Current version of sports base"
+msgstr "La versione corrente del database sport"
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_results.php:20
+msgid ""
+"Choose the categories that will be shown in widget (Stakes Widget Sports) on "
+"the site. If all the check marks are removed, the site will screen all the "
+"categories"
+msgstr ""
+"Seleziona le categorie che verranno mostrate nel widget (Widget Giocate "
+"Sport) sul sito. Se vengono rimossi tutti i segni di spunta, il sito "
+"mostrerà tutte le categorie"
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_top.php:23
+msgid "If you need personal reference, push this button."
+msgstr "Se hai bisogno di un riferimento personale, premi questo pulsante."
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_top.php:23
+msgid "Get partner reference"
+msgstr "Ottieni riferimento partner"
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_top.php:27
+msgid ""
+"The references in coefficients lead to the site of bookmaker`s office "
+"betathome."
+msgstr ""
+"I riferimenti nei coefficenti conducono al sito dell’ufficio del bookmaker "
+"betathome."
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_top.php:29
+msgid "Affiliated reference"
+msgstr "Riferimento affiliato"
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_top.php:49
+msgid ""
+"Choose the categories that will be shown in widget (StakesWidgetTop) on the "
+"site. If all the check marks are removed, the site will screen all the "
+"categories"
+msgstr ""
+"  Seleziona l categoria che verrà mostrata nel widget (WidgetGiocateTop) sul "
+"sito. Se vengono rimossi tutti i segni di spunta, il sito mostrerà tutte le "
+"categorie"
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/widget/widget_sports.php:10
+msgid ""
+"Stakes Widget Sports - shows the list of tournaments in the form of tree"
+msgstr ""
+"Widget Giocate Sport – mostra la lista dei tornei in un diagramma ad albero"
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/widget/widget_sports.php:96
+msgid "The title"
+msgstr "Il titolo"
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/widget/widget_top.php:10
+msgid ""
+"Stakes Widget Top - shows the list of common stakes in the form of slider "
+"with tab cards"
+msgstr ""
+"  Widget Giocate Top – mostra la lista delle giocate comuni sotto forma di "
+"slider con schede"
