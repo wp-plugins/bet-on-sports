@@ -1,0 +1,215 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: bet on sports  2\n"
+"POT-Creation-Date: 2014-01-31 09:41+0200\n"
+"PO-Revision-Date: 2014-03-03 13:02+0200\n"
+"Last-Translator: \n"
+"Language-Team: SEOAlbion <igmavl@seoalbion.eu>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.4\n"
+"X-Poedit-KeywordsList: gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n"
+"%100<10 || n%100>=20) ? 1 : 2);\n"
+"Language: lt\n"
+"X-Poedit-SearchPath-0: C:\\Users\\test\\Documents\\NetBeansProjects\\bm1\\www"
+"\\premium-restyle.ru\\wp-test\\wp-content\\plugins\\bet-on-sports\n"
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/bw-shortcode.php:64
+msgid "Sport:"
+msgstr "Sportas:"
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/bw-shortcode.php:65
+msgid "Category:"
+msgstr "Kategorija:"
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/bw-shortcode.php:66
+msgid "Tournament:"
+msgstr "Turnyras:"
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/bw-stakes.php:33
+msgid "Tournament"
+msgstr "Turnyras"
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/bw-stakes.php:154
+msgid "Home"
+msgstr "Pradinis puslapis"
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/bw-stakes.php:155
+msgid "( Stakes Widget Top ) Upper widget"
+msgstr "( Statymų valdiklis Top ) Viršutinis valdiklis"
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/bw-stakes.php:156
+msgid "( Stakes Widget Sports ) Side widget"
+msgstr "( Statymų valdiklis Sportas ) Šoninis valdiklis"
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/bw-stakes.php:157
+msgid "Settings"
+msgstr "Nustatymai"
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_home.php:1
+msgid "Good afternoon"
+msgstr "Laba diena"
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_home.php:2
+msgid ""
+"The plug-in gives shows in widgets the actual coefficients for consecutive "
+"sport events. The references in coefficients lead to the site of bookmaker`s "
+"office betathome."
+msgstr ""
+"Įskiepai suteikia valdikliams tikslius nuoseklių sporto renginių "
+"koeficientus. Nuorodos koeficientuose nukreipia į bandomąjį puslapį – "
+"betathome."
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_home.php:5
+msgid ""
+"If you register at the site bet-at-home.com, you will be able to participate "
+"in the referral system"
+msgstr ""
+"Jeigu jūs esate užsiregistravęs svetainėje bet-at-home.com, jūs turėsite "
+"galimybę dalyvauti perdavimo sistemoje"
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_home.php:6
+msgid "get the partner reference"
+msgstr "Gauti partnerio atsiliepimą"
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_home.php:10
+msgid ""
+"To alter the ID from current one to your own. <b>You have to become a "
+"partner bet-at-home.com </b>"
+msgstr ""
+"Norint pakeisti esamą ID į jūsų paties.  <b>Jūs turite tapti bet-at-home.com "
+"partneriu. </b>"
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_home.php:11
+msgid "For this purpose you should:"
+msgstr "Norint tai padaryti, jūs turėtumėte:"
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_home.php:13
+msgid "Register"
+msgstr "Užsiregistruoti"
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_home.php:14
+msgid "Get your ID and paste it into \"Your ID\" field"
+msgstr "Gauti savo ID ir nukopijuoti jį į \"Jūsų ID\" laukelį"
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_home.php:15
+msgid ""
+"Get affiliated reference and paste it into the following tab (the upper "
+"widget) in the \"Affiliated reference\" field"
+msgstr ""
+"Gauti filialo atsiliepimą ir jį nukopijuot į kitą stulpelį (viršutinis "
+"valdiklis) “Filialo atsiliepimas” laukelyje."
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_home.php:16
+msgid "Earn money with us staying at home."
+msgstr "Užsidirbkite pinigus su mumis neišeidami iš namų."
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_home.php:19
+msgid "Your ID"
+msgstr "Jūsų ID"
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_home.php:22
+msgid "Your Language"
+msgstr "Jūsų kalba"
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_home.php:30
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_options.php:57
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_results.php:38
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_top.php:67
+msgid "Save"
+msgstr "Išsaugoti"
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_home.php:33
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_options.php:50
+msgid "Renew the data"
+msgstr "Atnaujinti duomenis"
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_home.php:34
+msgid "Restore standard settings"
+msgstr "Atstatyti pradinius nustatymus"
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_options.php:25
+msgid "Setting name"
+msgstr "Nustatymų pavadinimas "
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_options.php:26
+msgid "Setting"
+msgstr "Nustatymai"
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_options.php:27
+msgid "Comment"
+msgstr "Komentuoti"
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_options.php:30
+msgid "Language output"
+msgstr "Kalba, kuria bus išvedami duomenys "
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_options.php:43
+msgid "Language in which widgets are displayed on the site."
+msgstr "Kalba, kuri bus naudojama parodyti valdiklių turinį svetainėje"
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_options.php:44
+msgid "Language in which the data will be taken from the server."
+msgstr "Kalba, kuri bus naudojama norint gauti duomenis iš serverio"
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_options.php:49
+msgid "Current version of sports base"
+msgstr "Dabartinė sport-base versija"
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_results.php:20
+msgid ""
+"Choose the categories that will be shown in widget (Stakes Widget Sports) on "
+"the site. If all the check marks are removed, the site will screen all the "
+"categories"
+msgstr ""
+"Pasirinkite kategorijas, kurios bus rodomos valdiklyje (Statymų Valdiklis "
+"Sportas) svetainėje. Jeigu varnelės nepažymėtos, svetainė rodys visas "
+"kategorijas"
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_top.php:23
+msgid "If you need personal reference, push this button."
+msgstr "Jeigu jums reikia asmeninio atsliepimo, spauskite šį mygtuką."
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_top.php:23
+msgid "Get partner reference"
+msgstr "Gauti partnerio atsiliepimą"
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_top.php:27
+msgid ""
+"The references in coefficients lead to the site of bookmaker`s office "
+"betathome."
+msgstr "Nuorodos koeficientuose nukreipia į bandomąjį puslapį – betathome."
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_top.php:29
+msgid "Affiliated reference"
+msgstr "Filialo atsiliepimas"
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_top.php:49
+msgid ""
+"Choose the categories that will be shown in widget (StakesWidgetTop) on the "
+"site. If all the check marks are removed, the site will screen all the "
+"categories"
+msgstr ""
+"Pasirinkite kategorijas, kurios bus rodomos valdiklyje (Statymų Valdiklis "
+"Top) svetainėje. Jeigu varnelės nepažymėtos, svetainė rodys visas kategorijas"
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/widget/widget_sports.php:10
+msgid ""
+"Stakes Widget Sports - shows the list of tournaments in the form of tree"
+msgstr "Statymų Valdiklis Sportas – rodo turnyrų sąrašą medžio pavidalu"
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/widget/widget_sports.php:96
+msgid "The title"
+msgstr "Pavadinimas"
+
+#: C:\Users\test\Documents\NetBeansProjects\bm1\www\premium-restyle.ru\wp-test\wp-content\plugins\bet-on-sports/widget/widget_top.php:10
+msgid ""
+"Stakes Widget Top - shows the list of common stakes in the form of slider "
+"with tab cards"
+msgstr ""
+"Statymų Valdiklis Top - shows the list of common stakes in the form of "
+"slider with tab cards"
