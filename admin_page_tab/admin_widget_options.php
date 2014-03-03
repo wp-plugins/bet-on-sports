@@ -21,6 +21,12 @@ $wlang = get_option('BW_Lang');
 	if($wlang == 'cs_CZ'){
 		$wcz = 'selected="selected"';
 	}
+	if($wlang == 'pl_PL'){
+		$wpl = 'selected="selected"';
+	}
+	if($wlang == 'lt_LT'){
+		$wlt = 'selected="selected"';
+	}
 	?><form action="?page=bw_main_page&lang=update" method="POST">
 		<div class="CSSTableGenerator" >
 			<table>
@@ -34,12 +40,14 @@ $wlang = get_option('BW_Lang');
 					<td>
 						<select name="BW_Lang">
 							<option <?php echo $wru; ?> value="ru_RU">Русский</option>
-							<option <?php echo $wen; ?> value="en_US">English</option>	
+							<option <?php echo $wen; ?> value="en_US">English</option>
 							<option <?php echo $wit; ?> value="it_IT">Italiano</option>
 							<option <?php echo $wes; ?> value="es_ES">Español</option>
 							<option <?php echo $wde; ?> value="de_DE">Deutsch</option>
 							<option <?php echo $wpt; ?> value="pt_PT">Portugal</option>
 							<option <?php echo $wcz; ?> value="cs_CZ">Čeština</option>
+							<option <?php echo $wen; ?> value="pl_PL">Polski</option>
+							<option <?php echo $wen; ?> value="lt_LT">Lietùvių</option>
 						</select>
 					</td>
 					<td>
