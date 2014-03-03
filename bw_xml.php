@@ -90,6 +90,22 @@ class Bw_xml {
 				$xml = file_get_contents('http://www.bukmekerskajakontora.ru/wp-content/themes/gameday/xml/sportsCZ.xml');
 			return $xml;
 		}
+		if ($lang == 'pl_PL') {
+			if ($parse_type == 'simplexml_load_file')
+				$xml = simplexml_load_file('http://www.bukmekerskajakontora.ru/wp-content/themes/gameday/xml/sportsPL.xml');
+
+			if ($parse_type == 'file_get_contents')
+				$xml = file_get_contents('http://www.bukmekerskajakontora.ru/wp-content/themes/gameday/xml/sportsPL.xml');
+			return $xml;
+		}
+		if ($lang == 'lt_LT') {
+			if ($parse_type == 'simplexml_load_file')
+				$xml = simplexml_load_file('http://www.bukmekerskajakontora.ru/wp-content/themes/gameday/xml/sportsEN.xml');
+
+			if ($parse_type == 'file_get_contents')
+				$xml = file_get_contents('http://www.bukmekerskajakontora.ru/wp-content/themes/gameday/xml/sportsEN.xml');
+			return $xml;
+		}
 	}
 
 }
