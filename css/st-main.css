@@ -139,3 +139,19 @@ ul.bw-tabs {
 .bw-o-p-name .bw-o-p{}
 .bw-o-p-name .bw-o-p .bw-t{font-weight: bold; display: inline-flex; width:100px;}
 .bw-o-p-name .bw-o-p span img{margin-right: 5px;} 
+
+
+.bw_links {
+	padding: 0 5px;
+	height: 12px;
+	background: rgb(125,126,125); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(125,126,125,1) 0%, rgba(14,14,14,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(125,126,125,1)), color-stop(100%,rgba(14,14,14,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', endColorstr='#0e0e0e',GradientType=0 ); /* IE6-9 */
+}
+.bw_links div { position: relative; padding: 0 !important; margin: 0 !important; display: inline-block; height: 12px; }
+.bw_links a img { position: absolute; top: -2px; }

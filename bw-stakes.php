@@ -223,7 +223,7 @@ class Stakes {
 
 	public function bw_unset_options() {
 
-		wp_delete_post(get_option('BW_permalink_id'));
+		wp_delete_post(get_option('BW_permalink_id'),TRUE);
 		delete_option('BW_link');
 		delete_option('BW_permalink_id');
 		delete_option('BW_current_date');

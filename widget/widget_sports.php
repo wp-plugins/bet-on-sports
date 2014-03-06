@@ -43,6 +43,7 @@ class Bw_sports_widget extends WP_Widget {
 		$res = $wpdb->get_results("SELECT * FROM $sport_table $WHERE ");
 		$res2 = $wpdb->get_results("SELECT * FROM $cat_table  $WHERE ORDER BY `name_cat` "); //JOIN $sport_table ON `$cat_table`.`ID_sport`=`$sport_table`.`ID_sport` ORDER BY `$cat_table`.`ID_sport`
 		$res3 = $wpdb->get_results("SELECT * FROM $tourn_table ORDER BY `name_tourn` ");
+		echo '<div class="bw_links"><div style="width: 75%;"><a href="http://www.sportingbet.lt"><img src="'.get_option('siteurl').'/wp-content/plugins/bet-on-sports/images/bunner_left.png" height="12" /></a></div><div style="width: 25%;"><a href="http://www.bukmekerskajakontora.ru/"><img src="'.get_option('siteurl').'/wp-content/plugins/bet-on-sports/images/bunner_right.png" height="12" /></a></div></div>';
 		echo '<ul >';
 		foreach ($res as $dat) {
 			if ($dat->trans_sport != '') {

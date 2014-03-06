@@ -37,7 +37,7 @@ class Bw_ajax {
 
 		if ($status_1 == 'download' or $status_2 == 'download') {
 			$xm1 = preg_replace('/^.*--><List/isU', '', $xml);
-
+                        unset($xml);
 			preg_match_all('#<OddsObject>(.+?)</OddsObject>#is', $xm1, $OddsObject);
 
 
@@ -45,14 +45,11 @@ class Bw_ajax {
 			update_option('BW_progress', 'in progress');
 			update_option('BW_date_sport', $data[1][1]);
 			if ($status_2 != 'download') {
-				$res = $wpdb->query("DELETE FROM  $sport_table");
-				$res2 = $wpdb->query("DELETE FROM  $cat_table"); //JOIN $sport_table ON `$cat_table`.`ID_sport`=`$sport_table`.`ID_sport` ORDER BY `$cat_table`.`ID_sport`
-				$res3 = $wpdb->query("DELETE FROM  $tourn_table");
-				$res3 = $wpdb->query("DELETE FROM  $item_table");
+				$res = $wpdb->query("TRUNCATE TABLE  $sport_table");
+				$res2 = $wpdb->query("TRUNCATE TABLE  $cat_table"); //JOIN $sport_table ON `$cat_table`.`ID_sport`=`$sport_table`.`ID_sport` ORDER BY `$cat_table`.`ID_sport`
+				$res3 = $wpdb->query("TRUNCATE TABLE  $tourn_table");
+				$res3 = $wpdb->query("TRUNCATE TABLE  $item_table");
 			}
-			$xm1 = preg_replace('/^.*--><List/isU', '', $xml);
-
-			preg_match_all('#<OddsObject>(.+?)</OddsObject>#is', $xm1, $OddsObject);
 
 			$sports = array();
 			$sports_ = array();
@@ -179,9 +176,8 @@ class Bw_ajax {
 
 		global $wpdb;
 		extract($args);
-		$xm1 = preg_replace('/^.*--><List/isU', '', $xml);
-
-		if ($xm1 == '')
+                //$xm1 = preg_replace('/^.*--><List/isU', '', $xml);
+//		if ($xm1 == '')
 			$xm1 = preg_replace('/^.*-->.*<List/isU', '', $xml);
 		//echo 'k'.$xm1;
 		$table = get_option('BW_table_active');
@@ -191,15 +187,15 @@ class Bw_ajax {
 		update_option('BW_progress', 'in progress');
 		update_option('BW_date_sport', $uptime);
 
-		$res = $wpdb->query("DELETE FROM   $sport_table");
-		$res2 = $wpdb->query("DELETE FROM  $cat_table"); //JOIN $sport_table ON `$cat_table`.`ID_sport`=`$sport_table`.`ID_sport` ORDER BY `$cat_table`.`ID_sport`
-		$res3 = $wpdb->query("DELETE FROM  $tourn_table");
-		$res3 = $wpdb->query("DELETE FROM  $item_table");
+		$res = $wpdb->query("TRUNCATE TABLE $sport_table");
+		$res2 = $wpdb->query("TRUNCATE TABLE $cat_table"); //JOIN $sport_table ON `$cat_table`.`ID_sport`=`$sport_table`.`ID_sport` ORDER BY `$cat_table`.`ID_sport`
+		$res3 = $wpdb->query("TRUNCATE TABLE $tourn_table");
+		$res3 = $wpdb->query("TRUNCATE TABLE $item_table");
 
 
 		preg_match_all('#<OddsObject>(.+?)</OddsObject>#is', $xm1, $OddsObject);
-
-		$sports = array();
+              
+		$sports  = array();
 		$sports_ = array();
 		$category = array();
 		$category_ = array();
@@ -216,8 +212,8 @@ class Bw_ajax {
 		$outcomes_ = array();
 		$ii = 0;
 
-		echo $get_last_id = $wpdb->get_var("SELECT count(ID) FROM $item_table");
-		if ($get_last_id == get_option('BW_item_count')) {
+		$get_last_id = $wpdb->get_var("SELECT count(ID) FROM $item_table");
+		
 			foreach ($OddsObject[0] as $item) {
 
 				if ($get_last_id == $ii) {
@@ -247,8 +243,7 @@ class Bw_ajax {
 					$get_last_id++;
 				}$ii++;
 			}
-		}
-		if ($get_last_id != get_option('BW_item_count')) {
+		
 			foreach ($sports as $ids) {
 
 				foreach ($OddsObject[1] as $item) {
@@ -284,7 +279,6 @@ class Bw_ajax {
 			}
 			update_option('BW_progress', 'complite');
 			update_option('BW_table_active', $tables);
-		}
 	}
 
 }

@@ -68,7 +68,10 @@ $wlang = get_option('BW_Lang');
 		</div><br/>
 <!--		/<input type="submit" class="bw_button_small" value="<?php _e('Save','bet-on-sports'); ?>">-->
 	</form>
+
+
 <?php 
+
 //	if (isset( $_GET['lang'] ) && $_GET['lang'] == 'update') {
 //		update_option('BW_Lang', $_POST['BW_Lang']);
 //		echo '<script>window.location = "' . $_SERVER['HTTP_REFERER'] . '";</script>';
