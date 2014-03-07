@@ -1,4 +1,4 @@
-=== Bet on sports - Russian, English, German, Czech, Portuguese, Italian, Spanish, Polish, Lithuanian ===
+=== Bet on Sports - Russian, English, German, Czech, Portuguese, Italian, Spanish, Polish, Lithuanian ===
 Contributors: SEOAlbion
 Donate link: http://www.bukmekerskajakontora.ru/
 Tags: sport, stakes, sport prognoses, coefficients, tables of stakes , bookmaker's coefficient, bookmaker's office, stakes on sport, sport widgets,  widgets , affiliate
