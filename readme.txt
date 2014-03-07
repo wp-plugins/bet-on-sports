@@ -7,10 +7,10 @@ Tested up to: 2.1
 Stable tag: 2.0
 License: GPL
 License URI: http://www.gnu.org/licenses/gpl.html
-Betonsports - The plug-in shows the actual coefficients for consecutive sport events. 
+Bet on Sports - The plug-in shows the actual coefficients for consecutive sport events. 
 == Description ==
 **Tables, stakes on sport, prognoses.** There are two widgets - the upper and the side ones, where the coefficients for stakes of bookmaker's office betathome are shown, the visitors of your site can enter stakes at once! The partner reference can be changed, there is an opportunity to screen different types of sport.
-**Betonsports** - shows the actual coefficients for consecutive sport events. You can also become a participator of partner program bet-at-home.com
+**Bet on Sports** - shows the actual coefficients for consecutive sport events. You can also become a participator of partner program bet-at-home.com
 The plug-in consists of two widgets :
 
 * ( Stakes Widget Top ) Upper widget
