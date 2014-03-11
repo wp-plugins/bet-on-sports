@@ -100,7 +100,7 @@ For example:
 		register_sidebar($args_sidebar2);
 	endif;
 ?></code>
-After the side-bars were created one should add them to the theme. Paste the following code to the necessary point of your pattern:
+After the side-bars were created one should add them to the theme. Paste the following code to the necessary point of your template:
 <code>
 if( ! function_exists( 'register_sidebar' ) ) :
 dynamic_sidebar('Sidebar name1');
