@@ -43,21 +43,25 @@ class Stakes {
 		}
 		if ($string == 'btag') {
 			if (WPLANG == 'ru_RU') {
-				$link = 'a_45206b_23462';
+				$link = 'a_45206b_30968';
 			} elseif (WPLANG == 'en_US') {
-				$link = 'a_45206b_23453';
+				$link = 'a_45206b_32245';
 			} elseif (WPLANG == 'de_DE') {
-				$link = 'a_45206b_23448';
-			} elseif (WPLANG == 'it_IT') {
-				$link = 'a_45206b_23453';
-			} elseif (WPLANG == 'es_ES') {
-				$link = 'a_45206b_26633';
-			} elseif (WPLANG == 'pt_PT') {
-				$link = 'a_45206b_26633';
+				$link = 'a_45206b_33481';
 			} elseif (WPLANG == 'cs_CZ') {
-				$link = 'a_45206b_23730';
-			}else {
-				$link = 'a_45206b_23453';
+				$link = 'a_45206b_30327';
+			} elseif (WPLANG == 'pt_PT') {
+				$link = 'a_45206b_30938';
+			} elseif (WPLANG == 'it_IT') {
+				$link = 'a_45206b_32485';
+			} elseif (WPLANG == 'es_ES') {
+				$link = 'a_45206b_30938';
+			} elseif (WPLANG == 'pl_PL') {
+				$link = 'a_45206b_30948';
+			} elseif (WPLANG == 'lt_LT') {
+				$link = 'a_45206b_30968';
+			} else {
+				$link = 'a_45206b_32245';
 			}
 			return $link;
 		}
@@ -102,6 +106,12 @@ class Stakes {
 			$lang = 'pt';
 		} elseif (WPLANG == 'cs_CZ') {
 			$lang = 'cz';
+		} elseif (WPLANG == 'pl_PL') {
+			$lang = 'en';
+		} elseif (WPLANG == 'lt_LT') {
+			$lang = 'en';
+		} else {
+			$lang = 'en';
 		}
 		return $lang;
 	}
