@@ -35,7 +35,7 @@ class Stakes {
 			} elseif (WPLANG == 'pl_PL') {
 				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_30948&aid=';
 			} elseif (WPLANG == 'lt_LT') {
-				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_30968&aid= ';
+				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_30968&aid=';
 			} else {
 				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_32245&aid=';
 			}
@@ -79,7 +79,7 @@ class Stakes {
 			} elseif (WPLANG == 'pl_PL') {
 				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_30948&aid=';
 			} elseif (WPLANG == 'lt_LT') {
-				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_30968&aid= ';
+				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_30968&aid=';
 			} else {
 				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_32245&aid=';
 			}
