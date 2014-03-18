@@ -142,6 +142,7 @@ ul.bw-tabs {
 
 
 .bw_links {
+	margin-top: 5px;
 	padding: 0 5px;
 	height: 12px;
 	background: rgb(125,126,125); /* Old browsers */

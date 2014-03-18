@@ -19,19 +19,25 @@ class Stakes {
 		}
 		if ($string == 'sport') {
 			if (WPLANG == 'ru_RU') {
-				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_23462&aid=';
+				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_30968&aid=';
 			} elseif (WPLANG == 'en_US') {
-				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_23453&aid=';
+				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_32245&aid=';
 			} elseif (WPLANG == 'de_DE') {
-				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_23448&aid=';
-			} elseif (WPLANG == 'it_IT') {
-				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_23453&aid=';
-			} elseif (WPLANG == 'es_ES') {
-				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_26633&aid=';
-			} elseif (WPLANG == 'pt_PT') {
-				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_26633&aid=';
+				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_33481&aid=';
 			} elseif (WPLANG == 'cs_CZ') {
-				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_23730&aid=';
+				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_30327&aid=';
+			} elseif (WPLANG == 'pt_PT') {
+				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_30938&aid=';
+			} elseif (WPLANG == 'it_IT') {
+				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_32485&aid=';
+			} elseif (WPLANG == 'es_ES') {
+				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_30938&aid=';
+			} elseif (WPLANG == 'pl_PL') {
+				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_30948&aid=';
+			} elseif (WPLANG == 'lt_LT') {
+				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_30968&aid= ';
+			} else {
+				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_32245&aid=';
 			}
 			return $link;
 		}
@@ -50,6 +56,8 @@ class Stakes {
 				$link = 'a_45206b_26633';
 			} elseif (WPLANG == 'cs_CZ') {
 				$link = 'a_45206b_23730';
+			}else {
+				$link = 'a_45206b_23453';
 			}
 			return $link;
 		}
@@ -57,17 +65,23 @@ class Stakes {
 			if (WPLANG == 'ru_RU') {
 				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_30968&aid=';
 			} elseif (WPLANG == 'en_US') {
-				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_31115&aid=';
+				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_32245&aid=';
 			} elseif (WPLANG == 'de_DE') {
-				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_31131&aid=';
+				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_33481&aid=';
+			} elseif (WPLANG == 'cs_CZ') {
+				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_30327&aid=';
+			} elseif (WPLANG == 'pt_PT') {
+				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_30938&aid=';
 			} elseif (WPLANG == 'it_IT') {
 				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_32485&aid=';
 			} elseif (WPLANG == 'es_ES') {
 				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_30938&aid=';
-			} elseif (WPLANG == 'pt_PT') {
-				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_30938&aid=';
-			} elseif (WPLANG == 'cs_CZ') {
-				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_30327&aid=';
+			} elseif (WPLANG == 'pl_PL') {
+				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_30948&aid=';
+			} elseif (WPLANG == 'lt_LT') {
+				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_30968&aid= ';
+			} else {
+				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_32245&aid=';
 			}
 			return $link;
 		}
