@@ -68,7 +68,10 @@ class Bw_ajax {
 			$outcomes_ = array();
 			$ii = 0;
 
-			echo $get_last_id = $wpdb->get_var("SELECT count(ID) FROM $item_table");
+			$get_last_id = $wpdb->get_var("SELECT count(ID) FROM $item_table");
+			
+			if( $exit ) echo $get_last_id;
+			
 			if ($get_last_id != get_option('BW_item_count')) {
 				foreach ($OddsObject[0] as $item) {
 
@@ -149,6 +152,8 @@ class Bw_ajax {
 		Stakes::get_func_day();
 		if( $exit )
 		    exit; // выход нужен для того, чтобы в ответе не было ничего лишнего, только то что возвращает функция
+		else
+		    return true;
 	}
 
 	public function set_default_callback() {
