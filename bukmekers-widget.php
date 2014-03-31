@@ -13,7 +13,7 @@ register_activation_hook(__FILE__, 'bw_set_options');
 register_deactivation_hook(__FILE__, 'bw_unset_options');
 
 $url = explode("/", get_bloginfo('url'));
-$uri = ($url[3]) ? $url[3] . '/' : '/';
+$uri = ( isset( $url[3] ) ) ? $url[3] . '/' : '/';
 add_action('plugins_loaded', 'myplugin_init');
 function myplugin_init() {
      load_plugin_textdomain( 'bet-on-sports', false, dirname( plugin_basename( __FILE__ )).'/language/' );
@@ -29,7 +29,7 @@ require 'bw-functions.php';
 function bw_set_options() {
 	Stakes::bw_set_options();
 	$Bw_ajax = new Bw_ajax();
-	$Bw_ajax->my_action_callback();
+	$Bw_ajax->my_action_callback( TRUE );
 	unset( $Bw_ajax );
 }
 
