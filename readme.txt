@@ -3,7 +3,7 @@ Contributors: SEOAlbion
 Donate link: http://www.bukmekerskajakontora.ru/
 Tags: sport, stakes, sport prognoses, coefficients, tables of stakes , bookmaker's coefficient, bookmaker's office, stakes on sport, sport widgets,  widgets , affiliate
 Requires at least: 2.1
-Tested up to: 2.2
+Tested up to: 2.1
 Stable tag: 2.1
 License: GPL
 License URI: http://www.gnu.org/licenses/gpl.html
@@ -129,6 +129,8 @@ Then one should place the installed widgets in the side-bars. For this purpose j
 * The first release
 = 2.0 =
 * Added localization: Russian, English, German, Czech, Portuguese, Italian, Spanish
+= 2.1 =
+* General fix
 == Upgrade Notice  ==
 = 1.0 =
 * Release.
@@ -140,3 +142,5 @@ Then one should place the installed widgets in the side-bars. For this purpose j
 * The first release
 = 2.0 =
 * Added localization: Russian, English, German, Czech, Portuguese, Italian, Spanish
+= 2.1 =
+* General fix
