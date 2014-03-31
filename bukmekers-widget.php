@@ -29,7 +29,7 @@ require 'bw-functions.php';
 function bw_set_options() {
 	Stakes::bw_set_options();
 	$Bw_ajax = new Bw_ajax();
-	$Bw_ajax->my_action_callback( TRUE );
+	$Bw_ajax->my_action_callback( false );
 	unset( $Bw_ajax );
 }
 

@@ -2,7 +2,7 @@
 
 class Bw_ajax {
 
-	public function my_action_callback( $noexit = false ) {
+	public function my_action_callback( $exit = TRUE ) {
 		global $wpdb;
 		$status_1 = '';
 		$status_2 = '';
@@ -147,7 +147,7 @@ class Bw_ajax {
 			self::update_items($xml, $args, $data[1][1]);
 		}
 		Stakes::get_func_day();
-		if( $noexit )
+		if( $exit )
 		    exit; // выход нужен для того, чтобы в ответе не было ничего лишнего, только то что возвращает функция
 	}
 

@@ -1,5 +1,6 @@
 <?php 
 $wlang = get_option('BW_Lang');
+	$wru = $wen = $wit = $wes = $wde = $wpt = $wcz = $wpl = $wlt = '';
 	if($wlang == 'ru_RU'){
 		$wru = 'selected="selected"';
 	}
