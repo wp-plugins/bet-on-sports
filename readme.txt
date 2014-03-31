@@ -2,9 +2,9 @@
 Contributors: SEOAlbion
 Donate link: http://www.bukmekerskajakontora.ru/
 Tags: sport, stakes, sport prognoses, coefficients, tables of stakes , bookmaker's coefficient, bookmaker's office, stakes on sport, sport widgets,  widgets , affiliate
-Requires at least: 2.0
-Tested up to: 2.1
-Stable tag: 2.0
+Requires at least: 2.1
+Tested up to: 2.2
+Stable tag: 2.1
 License: GPL
 License URI: http://www.gnu.org/licenses/gpl.html
 Bet on Sports - The plug-in shows the actual coefficients for consecutive sport events. 
