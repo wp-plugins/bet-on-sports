@@ -30,8 +30,7 @@
 			<input type="submit" class="bw_button_small" value="<?php _e('Save','bet-on-sports'); ?>">
 	</form>		 
 <?php endif; ?>
-<span  class="updet bw_button_small"><?php _e('Renew the data','bet-on-sports'); ?> </span>
-<span  class="updete_default bw_button_small"><?php _e('Restore standard settings','bet-on-sports'); ?></span></p>
+<span  class="updet bw_button_small"><?php _e('Renew the data','bet-on-sports'); ?> </span></p>
 <div class="bw-none krutilka" id="krutilka" ></div>
 
 <?php
