@@ -145,7 +145,7 @@ class Stakes {
 		add_option('BW_sport_cat', 'all');
 		add_option('BW_top_widget_cat', 'all');
 		add_option('BW_show_link', 'close');
-		add_option('BW_ab_link', 'a_45206b_23447');
+		add_option('BW_ab_link', Stakes::get_func_links('btag'));
 		add_option('BW_ab_lang', Stakes::get_func_lang());
 		add_option('BW_table_active', 'item');
 		add_option('BW_progress', 'copmplite');
