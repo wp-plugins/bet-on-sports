@@ -85,9 +85,13 @@ function str2url($str) {
 }
 
 function get_oddid_link($oddID) {
+	
+	$btag = Stakes::get_func_links('btag');
+	$BW_ab_link = get_option('BW_ab_link');
+	$btag = str_replace('45206', $BW_ab_link, $btag);
 
     @$link .= 'https://affiliates.bet-at-home.com/processing/clickthrgh.asp?';
-    $link .= 'btag=' . get_option('BW_ab_link');
+    $link .= 'btag=' . $btag;
     $link .= '&lang=' . get_option('BW_ab_lang');
     $link .= '&oddid=' . $oddID;
 
@@ -96,9 +100,13 @@ function get_oddid_link($oddID) {
 }
 
 function get_afil_link() {
+	
+	$btag = Stakes::get_func_links('btag');
+	$BW_ab_link = get_option('BW_ab_link');
+	$btag = str_replace('45206', $BW_ab_link, $btag);
 
     @$link .= 'https://affiliates.bet-at-home.com/processing/clickthrgh.asp?';
-    $link .= 'btag=' . get_option('BW_ab_link');
+    $link .= 'btag=' . $btag;
     $link .= '&lang=' . get_option('BW_ab_lang');
 
 

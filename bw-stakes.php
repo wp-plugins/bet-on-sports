@@ -145,7 +145,7 @@ class Stakes {
 		add_option('BW_sport_cat', 'all');
 		add_option('BW_top_widget_cat', 'all');
 		add_option('BW_show_link', 'close');
-		add_option('BW_ab_link', Stakes::get_func_links('btag'));
+		add_option('BW_ab_link', '45206');
 		add_option('BW_ab_lang', Stakes::get_func_lang());
 		add_option('BW_table_active', 'item');
 		add_option('BW_progress', 'copmplite');
@@ -263,6 +263,7 @@ class Stakes {
 		delete_option('BW_top_widget_cat');
 		delete_option('bw_link_sport');
 		delete_option('BW_item_count');
+		delete_option('BW_option');
 	}
 
 	public function bw_main_page() {
@@ -339,7 +340,7 @@ class Stakes {
 				
 				update_option('BW_option',$option);
 				
-				update_option('BW_ab_link', Stakes::get_func_links('btag'));
+				update_option('BW_ab_link', '45206');
 				update_option('BW_ab_lang', Stakes::get_func_lang());
 				update_option('bw_link_sport', Stakes::get_func_links('sport'));
 				update_option('bw_link_top', Stakes::get_func_links('top'));
