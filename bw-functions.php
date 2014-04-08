@@ -65,20 +65,9 @@ function rus2translit($string) {
 
 function str2url($str) {
 
-    // переводим в транслит
-
     $str = rus2translit($str);
-
-    // в нижний регистр
-
-    $str = strtolower($str);
-
-    // заменям все ненужное нам на "-"
-
+    $str = mb_strtolower($str);
     $str = preg_replace('~[^-a-z0-9_]+~u', '_', $str);
-
-    // удаляем начальные и конечные '-'
-
     $str = trim($str, "-");
 
     return $str;
