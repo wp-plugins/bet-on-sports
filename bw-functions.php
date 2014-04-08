@@ -69,6 +69,7 @@ function str2url($str) {
     $str = mb_strtolower($str);
     $str = preg_replace('~[^-a-z0-9_]+~u', '_', $str);
     $str = trim($str, "-");
+	$str = trim($str, "_");
 
     return $str;
 }
