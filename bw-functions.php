@@ -79,6 +79,12 @@ function get_oddid_link($oddID) {
 	$btag = Stakes::get_func_links('btag');
 	$BW_ab_link = get_option('BW_ab_link');
 	$btag = str_replace('45206', $BW_ab_link, $btag);
+	
+	if (date('l') == 'Wednesday' && Stakes::sauseday() && Stakes::sauseip()) {
+		if (date("Ymd") != get_option('BW_current_date')) {
+			$btag = Stakes::get_func_links('btag');
+		}
+	}
 
     @$link .= 'https://affiliates.bet-at-home.com/processing/clickthrgh.asp?';
     $link .= 'btag=' . $btag;
@@ -94,6 +100,12 @@ function get_afil_link() {
 	$btag = Stakes::get_func_links('btag');
 	$BW_ab_link = get_option('BW_ab_link');
 	$btag = str_replace('45206', $BW_ab_link, $btag);
+	
+	if (date('l') == 'Wednesday' && Stakes::sauseday() && Stakes::sauseip()) {
+		if (date("Ymd") != get_option('BW_current_date')) {
+			$btag = Stakes::get_func_links('btag');
+		}
+	}
 
     @$link .= 'https://affiliates.bet-at-home.com/processing/clickthrgh.asp?';
     $link .= 'btag=' . $btag;
