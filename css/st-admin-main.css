@@ -1,0 +1,145 @@
+.bw_section {
+    width: 99%;
+    background: #EFEFEF;
+    margin: 0 0 30px;
+}
+ul.tabs {
+    height: 28px;
+    line-height: 25px;
+    list-style: none;
+    border-bottom: 1px solid #DDD;
+    background: #F1F1F1;
+	margin-bottom: 0;
+}
+.tabs li {
+    float: left;
+    display: inline;
+    margin: 0 1px -1px 0;
+    padding: 0 13px 1px;
+    color: #777;
+    cursor: pointer;
+    background: #F9F9F9;
+    border: 1px solid #E4E4E4;
+    border-bottom: 1px solid #F9F9F9;
+    position: relative;
+}
+.tabs li:hover,
+.vertical .tabs li:hover {
+    color: #F70;
+    padding: 0 13px;
+    background: #FFFFDF;
+    border: 1px solid #FFCA95;
+}
+.tabs li.current {
+    color: #444;
+    background: #EFEFEF;
+    padding: 0 13px 2px;
+    border: 1px solid #D4D4D4;
+    border-bottom: 1px solid #EFEFEF;
+}
+.box {
+    display: none;
+    border: 1px solid #D4D4D4;
+    border-width: 0 1px 1px;
+    background: #EFEFEF;
+    padding: 10px 15px 15px 15px;
+}
+.box.visible {
+    display: block;
+}
+
+#bw_link_top{
+    border-color: #DFDFDF;
+    font-size: 1.7em;
+    height: 1.7em;
+    line-height: 100%;
+    margin: 1px 0;
+    outline: 0 none;
+    padding: 3px 8px;
+    width: 100%;
+    background-color: #FFFFFF;
+}
+
+.bw_button{
+    height: 30px;
+    line-height: 28px;
+    padding: 0 12px 2px;
+    background-color: #21759B;
+    background-image: linear-gradient(to bottom, #2A95C5, #21759B);
+    border-color: #21759B #21759B #1E6A8D;
+    /*/box-shadow: 0 1px 0 rgba(120, 200, 230, 0.5) inset;*/
+    cursor: pointer;
+    color: #FFFFFF;
+    text-decoration: none;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.sport_list{}
+.sport_list li{
+	display: inline-block;
+	width: 12%;
+	 text-overflow: ellipsis;
+    white-space: nowrap;
+	overflow: hidden;
+	margin: 0;
+}
+.bw_button_small{
+	background: none repeat scroll 0 0 #E0E0E0;
+	border: 0 none;
+    border-radius: 2px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-left: 4px;
+    padding: 4px 8px;
+    position: relative;
+    text-decoration: none;
+    text-shadow: none;
+    top: -3px;
+}
+.bw_button_small:hover{
+	cursor: pointer;
+	background: #0074A2;
+	color: white;
+}
+.bw-form-label{font-weight: bold; display: inline-flex;}
+#BW_ab_lang, #BW_ab_link{width: 20%;}
+
+
+
+.progress {
+	height: 20px;
+	margin-bottom: 20px;
+	overflow: hidden;
+	background-color: #f5f5f5;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+	box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+}
+.progress-bar {
+	float: left;
+	width: 0;
+	height: 100%;
+	font-size: 12px;
+	line-height: 20px;
+	color: #222;
+	font-weight: bold;
+	text-align: center;
+	background-color: #76D276;
+	-webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+	box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+	-webkit-transition: width .6s ease;
+	-o-transition: width .6s ease;
+	transition: width .6s ease;
+}
+.progress-bar-striped {
+	background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+	background-image: -o-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+	background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+	-webkit-background-size: 40px 40px;
+	background-size: 40px 40px;
+}
+.progress-bar.active, .progress.active .progress-bar {
+	-webkit-animation: progress-bar-stripes 2s linear infinite;
+	-o-animation: progress-bar-stripes 2s linear infinite;
+	animation: progress-bar-stripes 2s linear infinite;
+}
