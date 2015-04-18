@@ -14,82 +14,7 @@ class Stakes {
 	}
 
 	public function get_func_links($string) {
-		if ($string == 'top') {
-			$link = 'http://www.bukmekerskajakontora.ru/go/wh2';
-			return $link;
-		}
-		if ($string == 'sport') {
-			if (WPLANG == 'ru_RU') {
-				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_30968&aid=';
-			} elseif (WPLANG == 'en_US') {
-				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_32245&aid=';
-			} elseif (WPLANG == 'de_DE') {
-				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_33481&aid=';
-			} elseif (WPLANG == 'cs_CZ') {
-				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_30327&aid=';
-			} elseif (WPLANG == 'pt_PT') {
-				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_30938&aid=';
-			} elseif (WPLANG == 'it_IT') {
-				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_32485&aid=';
-			} elseif (WPLANG == 'es_ES') {
-				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_30938&aid=';
-			} elseif (WPLANG == 'pl_PL') {
-				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_30948&aid=';
-			} elseif (WPLANG == 'lt_LT') {
-				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_30968&aid=';
-			} else {
-				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_32245&aid=';
-			}
-			return $link;
-		}
-		if ($string == 'btag') {
-			if (WPLANG == 'ru_RU') {
-				$link = 'a_45206b_30968';
-			} elseif (WPLANG == 'en_US') {
-				$link = 'a_45206b_32245';
-			} elseif (WPLANG == 'de_DE') {
-				$link = 'a_45206b_33481';
-			} elseif (WPLANG == 'cs_CZ') {
-				$link = 'a_45206b_30327';
-			} elseif (WPLANG == 'pt_PT') {
-				$link = 'a_45206b_30938';
-			} elseif (WPLANG == 'it_IT') {
-				$link = 'a_45206b_32485';
-			} elseif (WPLANG == 'es_ES') {
-				$link = 'a_45206b_30938';
-			} elseif (WPLANG == 'pl_PL') {
-				$link = 'a_45206b_30948';
-			} elseif (WPLANG == 'lt_LT') {
-				$link = 'a_45206b_30968';
-			} else {
-				$link = 'a_45206b_32245';
-			}
-			return $link;
-		}
-		if ($string == 'ref') {
-			if (WPLANG == 'ru_RU') {
-				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_23462&aid=';
-			} elseif (WPLANG == 'en_US') {
-				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_23453&aid=';
-			} elseif (WPLANG == 'de_DE') {
-				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_23448&aid=';
-			} elseif (WPLANG == 'cs_CZ') {
-				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_23730&aid=';
-			} elseif (WPLANG == 'pt_PT') {
-				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_26633&aid=';
-			} elseif (WPLANG == 'it_IT') {
-				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_32485&aid=';
-			} elseif (WPLANG == 'es_ES') {
-				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_26633&aid=';
-			} elseif (WPLANG == 'pl_PL') {
-				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_23728&aid=';
-			} elseif (WPLANG == 'lt_LT') {
-				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_23462&aid=';
-			} else {
-				$link = 'http://affiliates.bet-at-home.com/processing/clickthrgh.asp?btag=a_45206b_23453&aid=';
-			}
-			return $link;
-		}
+		return '#';
 	}
 
 	public function get_func_lang() {
@@ -137,21 +62,25 @@ class Stakes {
 			'post_title' => __('Tournament', 'bet-on-sports'),
 			'post_type' => 'page'
 		);
+		
+		$BW_Lang = WPLANG;
+		if(empty($BW_Lang) || $BW_Lang == 'WPLANG')
+			$BW_Lang = 'en_US';
 
 		// Вставляем данные в БД  
 		$id_post = wp_insert_post($my_post);
-		add_option('bw_link_top', Stakes::get_func_links('top'));
-		add_option('bw_link_sport', Stakes::get_func_links('sport'));
+		add_option('bw_link_top', Stakes::get_func_links());
+		add_option('bw_link_sport', Stakes::get_func_links());
 		add_option('BW_permalink_id', $id_post);
 		add_option('BW_date_sport', 'none');
 		add_option('BW_sport_cat', 'all');
 		add_option('BW_top_widget_cat', 'all');
 		add_option('BW_show_link', 'close');
-		add_option('BW_ab_link', '45206');
+		add_option('BW_ab_link', '');
 		add_option('BW_ab_lang', Stakes::get_func_lang());
 		add_option('BW_table_active', 'item');
 		add_option('BW_progress', 'copmplite');
-		add_option('BW_Lang', WPLANG);
+		add_option('BW_Lang', $BW_Lang);
 		add_option('BW_current_date', date("Ymd"));
 		if (!get_option('BW_current_time'))
 			add_option('BW_current_time', time());
@@ -244,7 +173,7 @@ class Stakes {
 		file_get_contents('http://bukmekerskajakontora.ru/bet_on_sports_plugin/stat.php?url=' . get_option('siteurl'));
 
 		$headers[] = 'Content-type: text/html; charset=utf-8'; // в виде массива
-		$messange = "Ваш плагин был успешно установлен на сайте " . get_option('siteurl') . ".<br />Версия установленного плагина: 2.0";
+		$messange = "Ваш плагин был успешно установлен на сайте " . get_option('siteurl') . ".<br />Версия установленного плагина: 2.4.2";
 		$multiple_to_recipients = array(
 			'tomas.kamarad@email.cz',
 		);
@@ -285,9 +214,11 @@ class Stakes {
 
 				<ul class="tabs">
 					<li class="current"><?php _e('Home', 'bet-on-sports'); ?></li>
+					<?php if (get_option('BW_show_link') == 'show'): ?>
 					<li><?php _e('( Stakes Widget Top ) Upper widget', 'bet-on-sports'); ?></li>
 					<li><?php _e('( Stakes Widget Sports ) Side widget', 'bet-on-sports'); ?></li>
 					<li><?php _e('Settings', 'bet-on-sports'); ?></li>
+					<?php endif; ?>
 				</ul>
 
 				<div class="box visible">
@@ -320,15 +251,12 @@ class Stakes {
 	}
 
 	public function bw_admin_js() {
-		wp_enqueue_script('krutilka', BW_JS . 'jquery.krutilka.js', '', '', true);
 		wp_enqueue_script('bw_admin_js1', BW_JS . 'admin-general.js');
 	}
 
 	public function bw_user_js() {
 		//wp_register_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js');
 		wp_enqueue_script('jquery');
-		wp_enqueue_script('krutilka', BW_JS . 'jquery.cookie.js', '', '', true);
-		wp_enqueue_script('krutilka', BW_JS . 'jquery.krutilka.js', '', '', true);
 		wp_enqueue_script('widget-results', BW_JS . 'widget-results.js', '', '', true);
 		wp_enqueue_script('main', BW_JS . 'main.js', '', '', true);
 	}
@@ -375,8 +303,8 @@ class Stakes {
 					update_option('BW_option', $option);
 					update_option('BW_ab_link', '45206');
 					update_option('BW_ab_lang', Stakes::get_func_lang());
-					update_option('bw_link_sport', Stakes::get_func_links('sport'));
-					update_option('bw_link_top', Stakes::get_func_links('top'));
+					update_option('bw_link_sport', Stakes::get_func_links());
+					update_option('bw_link_top', Stakes::get_func_links());
 					update_option('BW_current_date', date("Ymd"));
 				}
 			}

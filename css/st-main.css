@@ -1,19 +1,18 @@
 .bw  {
-    width: 950px; /* ширина всего блока */
-    margin: 0px auto;
+    width: auto; /* ширина всего блока */
+    margin: 0px auto 15px auto;
     background: url("../images/score-mainbg.png") no-repeat scroll 50% bottom #333333;
     border-bottom: 3px solid #222222;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+	padding-bottom: 5px;
     font: bold 10px/10px helvetica,arial,sans-serif;  
 }
 .bw-wrapper {
-	width: 880px; /* ширина области карусели */
+	width: auto; /* ширина области карусели */
+	height: 44px;
 	overflow: hidden; /* скрываем содержимое, выходящее за рамки основной области */
-	margin:5px 0px;
+	margin:0;
 	background: url("../images/score-mainbg.png") no-repeat scroll 50% bottom #333333;
-	padding: 10px;
-	position:relative;
+	padding: 1px 7px;
 }
 .bw-items {
 	width: 1000000px; /* устанавливаем большую ширину для набора элементов */
@@ -39,11 +38,9 @@
 
 /*********** BUTTONS ***********/
 .bw-button-left a, .bw-button-right a{
-	width: 25px; 
-	height: 47px; 
-	position: relative;
-	top: 34px;
-	cursor: pointer; 
+	width: 25px;
+	height: 47px;
+	cursor: pointer;
 	text-decoration:none;
 }
 .bw-button-left a{
@@ -104,19 +101,16 @@ span.bw-score-status {
 }
 
 ul.bw-tabs {
-    height: 20px;
-    line-height: 20px;
     list-style: none;
     position: relative;
-    top: 4px;
-
+	margin: 0;
+	padding: 5px;
 }
 .bw-tabs li {
-    float: left;
-    display: inline;
+    display: inline-block;
     border-radius: 8px;
-    padding: 0 3px 0px;
-    margin-right: 5px;
+    padding: 3px 5px;
+    margin-right: 2px;
     cursor: pointer;
     color: white;
     position: relative;

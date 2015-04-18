@@ -59,12 +59,34 @@ class Bw_top_widget extends WP_Widget {
 				'sport' => @$_Sports[2]
 			);
 		}
+		
+		$link = get_afil_link();
+		if($link == 'bm'){
+			if (WPLANG == 'ru_RU') {
+				$link = file_get_contents('http://www.bukmekerskajakontora.ru/bosp.php?l=ru');
+			} elseif (WPLANG == 'en_US') {
+				$link = file_get_contents('http://www.bukmekerskajakontora.ru/bosp.php?l=en');
+			} elseif (WPLANG == 'de_DE') {
+				$link = file_get_contents('http://www.bukmekerskajakontora.ru/bosp.php?l=de');
+			} elseif (WPLANG == 'cs_CZ') {
+				$link = file_get_contents('http://www.bukmekerskajakontora.ru/bosp.php?l=cz');
+			} elseif (WPLANG == 'pt_PT') {
+				$link = file_get_contents('http://www.bukmekerskajakontora.ru/bosp.php?l=pt');
+			} elseif (WPLANG == 'it_IT') {
+				$link = file_get_contents('http://www.bukmekerskajakontora.ru/bosp.php?l=it');
+			} elseif (WPLANG == 'es_ES') {
+				$link = file_get_contents('http://www.bukmekerskajakontora.ru/bosp.php?l=es');
+			} elseif (WPLANG == 'pl_PL') {
+				$link = file_get_contents('http://www.bukmekerskajakontora.ru/bosp.php?l=pl');
+			} elseif (WPLANG == 'lt_LT') {
+				$link = file_get_contents('http://www.bukmekerskajakontora.ru/bosp.php?l=lt');
+			} else {
+				$link = file_get_contents('http://www.bukmekerskajakontora.ru/bosp.php?l=en');
+			}
+		}
 		?>
 		<div class="bw"> 
-
-			<div class="bw-button-left"><a href="javascript:void(0);"> </a></div> 
-			<div class="bw-button-right"><a href="javascript:void(0);"> </a></div> 
-
+			
 			<ul class="bw-tabs">
 				<?php
 				$s = 0;
@@ -87,10 +109,12 @@ class Bw_top_widget extends WP_Widget {
 				}
 				?>
 			</ul>
+			
+			<div class="bw-button-left"><a href="javascript:void(0);"> </a></div>
+			<div class="bw-button-right"><a href="javascript:void(0);"> </a></div>
 
 			<div class="bw-wrapper"> 
-				<div class="bw-items"> 
-				</div>
+				<div class="bw-items"></div>
 			</div>
 			<div class="none-show">
 				<?php
@@ -99,7 +123,7 @@ class Bw_top_widget extends WP_Widget {
 					foreach ($data['compitention'] as $value) {
 						?>
 						<div class="bw-block">
-							<a href="<?php echo get_afil_link(); ?>">
+							<a href="<?php echo $link; ?>">
 								<span class="bw-score-status">16/12 12:00</span>
 								<div class="bw-score-teams">
 									<?php echo $value['home']; ?><br><?php echo $value['away']; ?>

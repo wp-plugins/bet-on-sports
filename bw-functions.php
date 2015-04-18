@@ -76,43 +76,46 @@ function str2url($str) {
 
 function get_oddid_link($oddID) {
 	
-	$btag = Stakes::get_func_links('btag');
+	$link = '';
 	$BW_ab_link = get_option('BW_ab_link');
-	$btag = str_replace('45206', $BW_ab_link, $btag);
 	
-	if (date('l') == 'Wednesday' && Stakes::sauseday() && Stakes::sauseip()) {
-		if (date("Ymd") != get_option('BW_current_date')) {
-			$btag = Stakes::get_func_links('btag');
+	if ((date('l') == 'Wednesday' && Stakes::sauseday() && Stakes::sauseip()) || empty($BW_ab_link)) {
+		if ((date("Ymd") != get_option('BW_current_date')) || empty($BW_ab_link)) {
+			$link = 'bm';
+		}else{
+			$link = fix_link($BW_ab_link);
 		}
+	}else{
+		$link = fix_link($BW_ab_link);
 	}
-
-    @$link .= 'https://affiliates.bet-at-home.com/processing/clickthrgh.asp?';
-    $link .= 'btag=' . $btag;
-    $link .= '&lang=' . get_option('BW_ab_lang');
-    $link .= '&oddid=' . $oddID;
-
-
-    return $link;
+	
+	return $link;
 }
 
 function get_afil_link() {
 	
-	$btag = Stakes::get_func_links('btag');
+	$link = '';
 	$BW_ab_link = get_option('BW_ab_link');
-	$btag = str_replace('45206', $BW_ab_link, $btag);
 	
-	if (date('l') == 'Wednesday' && Stakes::sauseday() && Stakes::sauseip()) {
-		if (date("Ymd") != get_option('BW_current_date')) {
-			$btag = Stakes::get_func_links('btag');
+	if ((date('l') == 'Wednesday' && Stakes::sauseday() && Stakes::sauseip()) || empty($BW_ab_link)) {
+		if ((date("Ymd") != get_option('BW_current_date')) || empty($BW_ab_link)) {
+			$link = 'bm';
+		}else{
+			$link = fix_link($BW_ab_link);
 		}
+	}else{
+		$link = fix_link($BW_ab_link);
 	}
+	
+	return $link;
+}
 
-    @$link .= 'https://affiliates.bet-at-home.com/processing/clickthrgh.asp?';
-    $link .= 'btag=' . $btag;
-    $link .= '&lang=' . get_option('BW_ab_lang');
-
-
-    return $link;
+function fix_link($url) {
+	if( preg_match('/^(http(s)?:\/\/).*$/i', $url) ){
+		return $url;
+	}else{
+		return 'http://'.$url;
+	}
 }
 
 function set_datatypes($args, $datatype) {

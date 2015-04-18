@@ -3,6 +3,34 @@
 class Bw_shortcode {
 
 	public function bw_get_tournament() {
+		
+		$link = get_afil_link();
+		if($link == 'bm'){
+			if (WPLANG == 'ru_RU') {
+				$link = file_get_contents('http://www.bukmekerskajakontora.ru/bosp.php?l=ru');
+			} elseif (WPLANG == 'en_US') {
+				$link = file_get_contents('http://www.bukmekerskajakontora.ru/bosp.php?l=en');
+			} elseif (WPLANG == 'de_DE') {
+				$link = file_get_contents('http://www.bukmekerskajakontora.ru/bosp.php?l=de');
+			} elseif (WPLANG == 'cs_CZ') {
+				$link = file_get_contents('http://www.bukmekerskajakontora.ru/bosp.php?l=cz');
+			} elseif (WPLANG == 'pt_PT') {
+				$link = file_get_contents('http://www.bukmekerskajakontora.ru/bosp.php?l=pt');
+			} elseif (WPLANG == 'it_IT') {
+				$link = file_get_contents('http://www.bukmekerskajakontora.ru/bosp.php?l=it');
+			} elseif (WPLANG == 'es_ES') {
+				$link = file_get_contents('http://www.bukmekerskajakontora.ru/bosp.php?l=es');
+			} elseif (WPLANG == 'pl_PL') {
+				$link = file_get_contents('http://www.bukmekerskajakontora.ru/bosp.php?l=pl');
+			} elseif (WPLANG == 'lt_LT') {
+				$link = file_get_contents('http://www.bukmekerskajakontora.ru/bosp.php?l=lt');
+			} else {
+				$link = file_get_contents('http://www.bukmekerskajakontora.ru/bosp.php?l=en');
+			}
+		}
+		
+		
+		
 		global $wpdb;
 
 		$param = Bw_shortcode::get_arr_name();
@@ -180,11 +208,11 @@ class Bw_shortcode {
 
 								$echoOsn .="<li class='bet-osn " . str2url($data['betName']) . "'>{$data['HomeTeam']} - {$data['AwayTeam']} <div class='bw-right'>";
 								if ($data['HomeOdds'])
-									$echoOsn .="<span class='bw-head-button-link'><a target='_blank' href='" . get_oddid_link($data['HomeoddId']) . "'>{$data['HomeOdds']}</a></span>";
+									$echoOsn .="<span class='bw-head-button-link'><a target='_blank' href='" . $link . "'>{$data['HomeOdds']}</a></span>";
 								if ($data['DrawOdds'])
-									$echoOsn .="<span class='bw-head-button-link'><a target='_blank' href='" . get_oddid_link($data['DrawoddId']) . "'>{$data['DrawOdds']}</a></span>";
+									$echoOsn .="<span class='bw-head-button-link'><a target='_blank' href='" . $link . "'>{$data['DrawOdds']}</a></span>";
 								if ($data['AwayOdds'])
-									$echoOsn .="<span class='bw-head-button-link'><a target='_tab' href='" . get_oddid_link($data['AwayoddId']) . "'>{$data['AwayOdds']}</a></span>";
+									$echoOsn .="<span class='bw-head-button-link'><a target='_tab' href='" . $link . "'>{$data['AwayOdds']}</a></span>";
 								$echoOsn .="</div></li> \n";
 
 								echo $echoOsn;
@@ -203,9 +231,9 @@ class Bw_shortcode {
 								}
 
 								$echoOsn .="<li class='bet-osn " . str2url($data['betName']) . "'>{$data['HomeTeam']} - {$data['AwayTeam']} <div class='bw-right'>";
-								$echoOsn .="<span class='bw-head-button-link'><a href='" . get_oddid_link($data['Outcomes'][0]['linkId']) . "'>{$data['Outcomes'][0]['Outcome']}</a></span>";
-								$echoOsn .="<span class='bw-head-button-link'><a href='" . get_oddid_link($data['Outcomes'][1]['linkId']) . "'>{$data['Outcomes'][1]['Outcome']}</a></span>";
-								$echoOsn .="<span class='bw-head-button-link'><a href='" . get_oddid_link($data['Outcomes'][2]['linkId']) . "'>{$data['Outcomes'][2]['Outcome']}</a></span>";
+								$echoOsn .="<span class='bw-head-button-link'><a href='" . $link . "'>{$data['Outcomes'][0]['Outcome']}</a></span>";
+								$echoOsn .="<span class='bw-head-button-link'><a href='" . $link . "'>{$data['Outcomes'][1]['Outcome']}</a></span>";
+								$echoOsn .="<span class='bw-head-button-link'><a href='" . $link . "'>{$data['Outcomes'][2]['Outcome']}</a></span>";
 								$echoOsn .="</div></li> \n";
 
 								echo $echoOsn;
@@ -228,11 +256,11 @@ class Bw_shortcode {
 
 								$echoOsn .="<li class='bet-osn " . str2url($data['betName']) . "'>{$data['HomeTeam']} - {$data['AwayTeam']} <div class='bw-right'>";
 								if ($data['HomeOdds'])
-									$echoOsn .="<span class='bw-head-button-link'><a href='" . get_oddid_link($data['HomeoddId']) . "'>{$data['HomeOdds']}</a></span>";
+									$echoOsn .="<span class='bw-head-button-link'><a href='" . $link . "'>{$data['HomeOdds']}</a></span>";
 								if ($data['DrawOdds'])
-									$echoOsn .="<span class='bw-head-button-link'><a href='" . get_oddid_link($data['DrawoddId']) . "'>{$data['DrawOdds']}</a></span>";
+									$echoOsn .="<span class='bw-head-button-link'><a href='" . $link . "'>{$data['DrawOdds']}</a></span>";
 								if ($data['AwayOdds'])
-									$echoOsn .="<span class='bw-head-button-link'><a href='" . get_oddid_link($data['AwayoddId']) . "'>{$data['AwayOdds']}</a></span>";
+									$echoOsn .="<span class='bw-head-button-link'><a href='" . $link . "'>{$data['AwayOdds']}</a></span>";
 								$echoOsn .="</div></li> \n";
 
 								echo $echoOsn;
@@ -252,9 +280,9 @@ class Bw_shortcode {
 								}
 								$echoOsn .="<li class='bet-osn " . str2url($data['betName']) . "'>{$data['HomeTeam']} - {$data['AwayTeam']} <div class='bw-right'>";
 								if ($data['UnderOdds'])
-									$echoOsn .="<span class='bw-head-button-link'><a href='" . get_oddid_link($data['UnderlinkId']) . "'>{$data['UnderOdds']}</a></span>";
+									$echoOsn .="<span class='bw-head-button-link'><a href='" . $link . "'>{$data['UnderOdds']}</a></span>";
 								if ($data['OverOdds'])
-									$echoOsn .="<span class='bw-head-button-link'><a href='" . get_oddid_link($data['OverlinkId']) . "'>{$data['OverOdds']}</a></span>";
+									$echoOsn .="<span class='bw-head-button-link'><a href='" . $link . "'>{$data['OverOdds']}</a></span>";
 								$echoOsn .="</div></li> \n";
 
 								echo $echoOsn;
@@ -271,8 +299,8 @@ class Bw_shortcode {
 									echo $echoOsnh;
 								}
 								$echoOsn .="<li class='bet-osn " . str2url($data['betName']) . "'>{$data['HomeTeam']} - {$data['AwayTeam']} ({$data['SpreadHome']} / {$data['SpreadAway']}) <div class='bw-right'>";
-								$echoOsn .="<span class='bw-head-button-link'><a href='" . get_oddid_link($data['SpreadHomelinkId']) . "'>{$data['SpreadHomeodd']}</a></span>";
-								$echoOsn .="<span class='bw-head-button-link'><a href='" . get_oddid_link($data['SpreadAwaylinkId']) . "'>{$data['SpreadAwayodd']}</a></span>";
+								$echoOsn .="<span class='bw-head-button-link'><a href='" . $link . "'>{$data['SpreadHomeodd']}</a></span>";
+								$echoOsn .="<span class='bw-head-button-link'><a href='" . $link . "'>{$data['SpreadAwayodd']}</a></span>";
 								$echoOsn .="</div></li> \n";
 
 								echo $echoOsn;
@@ -315,19 +343,19 @@ class Bw_shortcode {
 								
 									$echoOsn .="<li class='bet-osn'>{$data['HomeTeam']} - {$data['AwayTeam']} $sp <div class='bw-right'>";
 									if ($data['HomeOdds'])
-										$echoOsn .="<span class='bw-head-button-link'><a href='" . get_oddid_link($data['HomeoddId']) . "'>{$data['HomeOdds']}</a></span>";
+										$echoOsn .="<span class='bw-head-button-link'><a href='" . $link . "'>{$data['HomeOdds']}</a></span>";
 									if ($data['DrawOdds'])
-										$echoOsn .="<span class='bw-head-button-link'><a href='" . get_oddid_link($data['DrawoddId']) . "'>{$data['DrawOdds']}</a></span>";
+										$echoOsn .="<span class='bw-head-button-link'><a href='" . $link . "'>{$data['DrawOdds']}</a></span>";
 									if ($data['AwayOdds'])
-										$echoOsn .="<span class='bw-head-button-link'><a href='" . get_oddid_link($data['AwayoddId']) . "'>{$data['AwayOdds']}</a></span>";
+										$echoOsn .="<span class='bw-head-button-link'><a href='" . $link . "'>{$data['AwayOdds']}</a></span>";
 									if ($data['UnderOdds'])
-										$echoOsn .="<span class='bw-head-button-link'><a href='" . get_oddid_link($data['UnderoddId']) . "'>{$data['UnderOdds']}</a></span>";
+										$echoOsn .="<span class='bw-head-button-link'><a href='" . $link . "'>{$data['UnderOdds']}</a></span>";
 									if ($data['OverOdds'])
-										$echoOsn .="<span class='bw-head-button-link'><a href='" . get_oddid_link($data['OveroddId']) . "'>{$data['OverOdds']}</a></span>";
+										$echoOsn .="<span class='bw-head-button-link'><a href='" . $link . "'>{$data['OverOdds']}</a></span>";
 										if ($data['SpreadHome'])
-										$echoOsn .="<span class='bw-head-button-link'><a href='" . get_oddid_link($data['SpreadHomelinkId']) . "'>{$data['SpreadHomeodd']}</a></span>";
+										$echoOsn .="<span class='bw-head-button-link'><a href='" . $link . "'>{$data['SpreadHomeodd']}</a></span>";
 										if ($data['SpreadAway'])
-										$echoOsn .="<span class='bw-head-button-link'><a href='" . get_oddid_link($data['SpreadAwaylinkId']) . "'>{$data['SpreadAwayodd']}</a></span>";
+										$echoOsn .="<span class='bw-head-button-link'><a href='" . $link . "'>{$data['SpreadAwayodd']}</a></span>";
 									$echoOsn .="</div>";
 									$echoOsn .="</li> \n";
 								}else {
@@ -345,7 +373,7 @@ class Bw_shortcode {
 										}//linkId
 										if (!empty($value['name'])) {
 											$i++;
-											$echoOsn .="<li class='bet-osn '>{$value['name']}<div class='bw-right'><span class='bw-head-button-link'><a href='" . get_oddid_link($value['linkId']) . "'>{$value['Outcome']}</a></span></div></li>";
+											$echoOsn .="<li class='bet-osn '>{$value['name']}<div class='bw-right'><span class='bw-head-button-link'><a href='" . $link . "'>{$value['Outcome']}</a></span></div></li>";
 										}
 									}
 									echo '</div>';

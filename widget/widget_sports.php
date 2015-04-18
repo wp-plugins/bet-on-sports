@@ -75,9 +75,6 @@ class Bw_sports_widget extends WP_Widget {
 		$url = explode("/", get_bloginfo('url'));
 		$uri = ( isset($url[3]) ) ? '/' . $url[3] . '/' : '/';
 		?>
-		<!--<div id="widget_results" linked="<?php echo $uri; ?>wp-content/plugins/bukmekers-widget/" permalink="<?php echo get_permalink(get_option('BW_permalink_id')); ?>">
-				<div id="ogidalka"><div id="krutilka"></div></div>
-		</div>-->
 
 
 		<?php

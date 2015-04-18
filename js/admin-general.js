@@ -27,10 +27,10 @@
 			createCookie(name, "", -1);
 		}
 
-		$('.krutilka').krutilka();
-		$('.krutilka').css({"display": "none"});
 		$('.updet').click(function() {
-			$('.krutilka').css({"display": "block"});
+			$(this).parent().hide(200);
+			
+			$('.krutilka.progress').show().find('.progress-bar.progress-bar-striped').addClass('active');
 			var data = {
 				action: 'my_action',
 				updat: 'upda'
@@ -41,37 +41,21 @@
 
 			// since 2.8 ajaxurl is always defined in the admin header and points to admin-ajax.php
 			jQuery.post(ajax, data, function(response) {
-				$('.krutilka').css({"display": "none"});
-				alert("The data is loaded successfully.");
-				window.location.reload();
-			});
-		});
-
-		$('.updete_default').click(function() {
-			$('.krutilka').css({"display": "block"});
-			var data = {
-				action: 'set_default'
-			};
-			var a1 = $('#opt').attr('ajax');
-
-			var ajax = a1 + '/wp-admin/admin-ajax.php';
-
-			// since 2.8 ajaxurl is always defined in the admin header and points to admin-ajax.php
-			jQuery.post(ajax, data, function(response) {
-				$('.krutilka').css({"display": "none"});
-
-				if (response == 'true') {
-					alert('The reset to standard settings is accomplished successfully');
-					window.location.reload();
-				}
-
-				if (response == 'false') {
-					alert('The reset to standard settings is not accomplished');
-					window.location.reload();
-				}
-
+				
 			});
 
+			window.progress_width = 0;
+			setInterval(function() {
+				if(window.progress_width == 100){
+					alert("The data is loaded successfully."); window.location.reload()
+				}else{
+					window.progress_width = window.progress_width+1;
+					$('.krutilka.progress .progress-bar.progress-bar-striped').css('width', window.progress_width+'%')
+					$('.krutilka.progress .progress-bar.progress-bar-striped').html(window.progress_width+'%');
+				}
+			}, 10000);
+
+			return false;
 		});
 
 		$('select[name="BW_Lang"]').change(function() {

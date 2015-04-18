@@ -16,7 +16,8 @@
 		$item_table = $wpdb->prefix . 'bw_item_1';
 	}
 	$res = $wpdb->get_results("SELECT * FROM $sport_table ");
-	$id_cat = explode(',', get_option('BW_sport_cat'));
+	$id_cat_raw = get_option('BW_sport_cat');
+	$id_cat = explode(',', $id_cat_raw);
 	?>
 
 	<?php
@@ -37,7 +38,7 @@
 		<?php
 		foreach ($res as $sport) {
 			if ($sport->name_sport != '') {
-				if (in_array($sport->ID_sport, $id_cat)) {
+				if ($id_cat_raw == 'all' || in_array($sport->ID_sport, $id_cat)) {
 					$chec = 'checked="checked"';
 				} else {
 					$chec = '';
@@ -50,7 +51,7 @@
 			<?php }
 		} ?>
 	</ul>
-	<input type="submit" class="bw_button_small" value="<?php _e('Save','bet-on-sports'); ?>">
+	<input type="submit" class="button button-primary" value="<?php _e('Save','bet-on-sports'); ?>">
 </form>
 
 <?php
@@ -68,7 +69,7 @@ if (isset( $_GET['results_button'] ) && $_GET['results_button'] == 'update') {
 		}
 		update_option('BW_sport_cat', $ids);
 	}else {
-		update_option('BW_sport_cat', 'all');
+		update_option('BW_sport_cat', '');
 	}
 
 	echo '<script>window.location = "' . $_SERVER['HTTP_REFERER'] . '";</script>';

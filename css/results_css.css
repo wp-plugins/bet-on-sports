@@ -72,12 +72,6 @@
 	background: #cccccc;
 	padding: 100px 0;
 }
-#krutilka{
-	display: block;
-    height: 25px;
-    width: 25px;
-    margin: 0 auto;
-}
 
 .bw-right{
 	float: right;
@@ -121,11 +115,12 @@
 	color:inherit;
 }
 
-.bet-osn-head, .bet-osn,.bet-osn2{
+.bet-osn-head, .bet-osn, .bet-osn2 {
     display:block;
     height:26px;
     border: none;
 	font: 12px/26px helvetica,arial,sans-serif;
+	clear: both;
 }
 .bet-osn-head{
 	font-weight: bold;
