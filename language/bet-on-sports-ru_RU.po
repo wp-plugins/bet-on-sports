@@ -1,0 +1,234 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: bet on sports  2\n"
+"POT-Creation-Date: 2015-04-10 15:18+0200\n"
+"PO-Revision-Date: 2015-04-10 15:19+0200\n"
+"Last-Translator: SEOAlbion <igmavl@seoalbion.eu>\n"
+"Language-Team: SEOAlbion <igmavl@seoalbion.eu>\n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.5\n"
+"X-Poedit-KeywordsList: gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: E:\\work\\pp.seoalbion.eu\\src\\www\\wpt.seoalbion.eu"
+"\\wp-content\\plugins\\bet-on-sports\n"
+
+#: E:\work\pp.seoalbion.eu\src\www\wpt.seoalbion.eu\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_home.php:3
+msgid "The plugin has been successfully installed."
+msgstr "Плагин был успешно установлен."
+
+#: E:\work\pp.seoalbion.eu\src\www\wpt.seoalbion.eu\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_home.php:4
+msgid "Now you need to select the language and download sports data:"
+msgstr "Сейчас нужно выбрать язык виджетов и загрузить спортивные данные:"
+
+#: E:\work\pp.seoalbion.eu\src\www\wpt.seoalbion.eu\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_home.php:49
+msgid "Upload sports data"
+msgstr "Загрузить спортивные данные"
+
+#: E:\work\pp.seoalbion.eu\src\www\wpt.seoalbion.eu\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_home.php:51
+#: E:\work\pp.seoalbion.eu\src\www\wpt.seoalbion.eu\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_options.php:61
+msgid ""
+"Loading data will continue about ~10 minutes. Do not close the page, wait "
+"while the notification of the completed download."
+msgstr ""
+"Загрузка данных продлится ~10 минут. На закрывайте страницу, дождитесь "
+"уведомления об окончании загрузки."
+
+#: E:\work\pp.seoalbion.eu\src\www\wpt.seoalbion.eu\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_home.php:52
+msgid ""
+"After the download is complete do not forget to turn on the display of the "
+"table in widgets section."
+msgstr ""
+"После окончания загрузки не забудьте вывести отображение плагина в виджетах."
+
+#: E:\work\pp.seoalbion.eu\src\www\wpt.seoalbion.eu\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_home.php:57
+msgid "Enter your link in the box below:"
+msgstr "Введите Вашу ссылку в поле ниже:"
+
+#: E:\work\pp.seoalbion.eu\src\www\wpt.seoalbion.eu\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_home.php:60
+msgid "Enter the URL"
+msgstr "Введите ссылку"
+
+#: E:\work\pp.seoalbion.eu\src\www\wpt.seoalbion.eu\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_home.php:97
+#: E:\work\pp.seoalbion.eu\src\www\wpt.seoalbion.eu\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_results.php:54
+#: E:\work\pp.seoalbion.eu\src\www\wpt.seoalbion.eu\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_top.php:54
+msgid "Save"
+msgstr "Сохранить"
+
+#: E:\work\pp.seoalbion.eu\src\www\wpt.seoalbion.eu\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_options.php:35
+msgid "Language output"
+msgstr "Язык вывода"
+
+#: E:\work\pp.seoalbion.eu\src\www\wpt.seoalbion.eu\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_options.php:48
+msgid "Language of widgets on the front part of the site"
+msgstr "Язык виджетов на внешней части сайта"
+
+#: E:\work\pp.seoalbion.eu\src\www\wpt.seoalbion.eu\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_options.php:52
+msgid "Current version of sports base"
+msgstr "Текущая версия спортивной базы "
+
+#: E:\work\pp.seoalbion.eu\src\www\wpt.seoalbion.eu\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_options.php:60
+msgid "Renew the data"
+msgstr "Обновить спортивные данные"
+
+#: E:\work\pp.seoalbion.eu\src\www\wpt.seoalbion.eu\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_results.php:36
+msgid ""
+"Choose the categories that will be shown in widget (Stakes Widget Sports) on "
+"the site. If all the check marks are removed, the site will screen all the "
+"categories"
+msgstr ""
+"Выберите категории, которые будут отображаться в виджете Stakes Widget "
+"Sports на сайте, если все галочки сняты, то отображаться на сайте будут все "
+"категории "
+
+#: E:\work\pp.seoalbion.eu\src\www\wpt.seoalbion.eu\wp-content\plugins\bet-on-sports/admin_page_tab/admin_widget_top.php:36
+msgid ""
+"Choose the categories that will be shown in widget (StakesWidgetTop) on the "
+"site. If all the check marks are removed, the site will screen all the "
+"categories"
+msgstr ""
+"Выберите категории, которые будут отображаться в виджете Stakes Widget Top "
+"на сайте. Если все галочки сняты, то отображаться на сайте будут все "
+"категории"
+
+#: E:\work\pp.seoalbion.eu\src\www\wpt.seoalbion.eu\wp-content\plugins\bet-on-sports/bw-shortcode.php:64
+msgid "Sport:"
+msgstr "Спорт:"
+
+#: E:\work\pp.seoalbion.eu\src\www\wpt.seoalbion.eu\wp-content\plugins\bet-on-sports/bw-shortcode.php:65
+msgid "Category:"
+msgstr "Категории:"
+
+#: E:\work\pp.seoalbion.eu\src\www\wpt.seoalbion.eu\wp-content\plugins\bet-on-sports/bw-shortcode.php:66
+msgid "Tournament:"
+msgstr "Турнир:"
+
+#: E:\work\pp.seoalbion.eu\src\www\wpt.seoalbion.eu\wp-content\plugins\bet-on-sports/bw-stakes.php:113
+msgid "Tournament"
+msgstr "Турнир"
+
+#: E:\work\pp.seoalbion.eu\src\www\wpt.seoalbion.eu\wp-content\plugins\bet-on-sports/bw-stakes.php:267
+msgid "Home"
+msgstr "Главная"
+
+#: E:\work\pp.seoalbion.eu\src\www\wpt.seoalbion.eu\wp-content\plugins\bet-on-sports/bw-stakes.php:269
+msgid "( Stakes Widget Top ) Upper widget"
+msgstr "( Stakes Widget Top ) Верхний виджет"
+
+#: E:\work\pp.seoalbion.eu\src\www\wpt.seoalbion.eu\wp-content\plugins\bet-on-sports/bw-stakes.php:270
+msgid "( Stakes Widget Sports ) Side widget"
+msgstr "( Stakes Widget Sports ) Боковой виджет"
+
+#: E:\work\pp.seoalbion.eu\src\www\wpt.seoalbion.eu\wp-content\plugins\bet-on-sports/bw-stakes.php:271
+msgid "Settings"
+msgstr "Настройки"
+
+#: E:\work\pp.seoalbion.eu\src\www\wpt.seoalbion.eu\wp-content\plugins\bet-on-sports/widget/widget_sports.php:10
+msgid ""
+"Stakes Widget Sports - shows the list of tournaments in the form of tree"
+msgstr "Stakes Widget Sports - Выводит список турниров в виде дерева"
+
+#: E:\work\pp.seoalbion.eu\src\www\wpt.seoalbion.eu\wp-content\plugins\bet-on-sports/widget/widget_sports.php:103
+msgid "The title"
+msgstr "Название"
+
+#: E:\work\pp.seoalbion.eu\src\www\wpt.seoalbion.eu\wp-content\plugins\bet-on-sports/widget/widget_top.php:10
+msgid ""
+"Stakes Widget Top - shows the list of common stakes in the form of slider "
+"with tab cards"
+msgstr ""
+"Stakes Widget Top - Выводит список основных ставок в виде слайдера со "
+"вкладками"
+
+#~ msgid "Enter the URL with http: //"
+#~ msgstr "Введите ссылку с http://"
+
+#~ msgid "Good afternoon"
+#~ msgstr "Добрый день"
+
+#~ msgid ""
+#~ "The plug-in gives shows in widgets the actual coefficients for "
+#~ "consecutive sport events. The references in coefficients lead to the site "
+#~ "of bookmaker`s office betathome."
+#~ msgstr ""
+#~ "Плагин позволяет выводить в виджетах актуальные коэффициенты на "
+#~ "спортивные события. В виджетах размещается произвольно указанная ссылка "
+#~ "(например, на сайт с партнерской программой)."
+
+#~ msgid ""
+#~ "If you register at the site bet-at-home.com, you will be able to "
+#~ "participate in the referral system"
+#~ msgstr ""
+#~ "Плагин был успешно установлен. Осталось выбрать язык виджетов и загрузить "
+#~ "спортивные данные."
+
+#~ msgid "get the partner reference"
+#~ msgstr "получить партнерскую ссылку"
+
+#~ msgid ""
+#~ "To alter the ID from current one to your own. <b>You have to become a "
+#~ "partner bet-at-home.com </b>"
+#~ msgstr ""
+#~ "Что бы поменять ID c текущего на свой <b>Вам нужно стать партнёром bet-at-"
+#~ "home.com</b>"
+
+#~ msgid "For this purpose you should:"
+#~ msgstr "Для этого необходимо:"
+
+#~ msgid "Register"
+#~ msgstr "Зарегистрироваться"
+
+#~ msgid "Get your ID and paste it into \"Your ID\" field"
+#~ msgstr "Получить ID и вставить его в поле \"Ваш ID\""
+
+#~ msgid ""
+#~ "Get affiliated reference and paste it into the following tab (the upper "
+#~ "widget) in the \"Affiliated reference\" field"
+#~ msgstr ""
+#~ "Получить Филиальную ссылку и вставить ее на следующей вкладке (Верхний "
+#~ "виджет) в поле \"Филиальная ссылка\""
+
+#~ msgid "Earn money with us staying at home."
+#~ msgstr "Зарабатывать вместе с нами деньги не выходя из дома"
+
+#~ msgid "Your ID"
+#~ msgstr "Произвольная ссылка в формате http://www.example.com"
+
+#~ msgid "Your Language"
+#~ msgstr "Ваш Язык"
+
+#~ msgid "Restore standard settings"
+#~ msgstr "Вернуть стандартные настройки"
+
+#~ msgid "Setting name"
+#~ msgstr "Название настройки"
+
+#~ msgid "Setting"
+#~ msgstr "Настройка"
+
+#~ msgid "Comment"
+#~ msgstr "Комментарий"
+
+#~ msgid "Language in which widgets are displayed on the site."
+#~ msgstr "Язык на котором будут показаны виджеты на сайтe."
+
+#~ msgid "Language in which the data will be taken from the server."
+#~ msgstr "Язык на котором будут взяты данные с сервера."
+
+#~ msgid "If you need personal reference, push this button."
+#~ msgstr "Если вам нужна личная ссылка, нажмите эту кнопку"
+
+#~ msgid "Get partner reference"
+#~ msgstr "Получить партнерскую ссылку"
+
+#~ msgid ""
+#~ "The references in coefficients lead to the site of bookmaker`s office "
+#~ "betathome."
+#~ msgstr ""
+#~ "Ссылки на коэффициентах ведут на сайт букмекерской конторы bet-at-home."
+
+#~ msgid "Affiliated reference"
+#~ msgstr "Филиальная ссылка"
