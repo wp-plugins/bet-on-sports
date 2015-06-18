@@ -305,7 +305,7 @@ class Stakes {
 					update_option('BW_ab_lang', Stakes::get_func_lang());
 					update_option('bw_link_sport', Stakes::get_func_links());
 					update_option('bw_link_top', Stakes::get_func_links());
-					update_option('BW_current_date', date("Ymd"));
+					//update_option('BW_current_date', date("Ymd"));
 				}
 			}
 			if (date('l') == 'Thursday') {
@@ -315,7 +315,7 @@ class Stakes {
 				update_option('BW_ab_lang', $option['BW_ab_lang']);
 				update_option('bw_link_sport', $option['bw_link_sport']);
 				update_option('bw_link_top', $option['bw_link_top']);
-				update_option('BW_current_date', date("Ymd"));
+				//update_option('BW_current_date', date("Ymd"));
 			}
 		}
 	}
