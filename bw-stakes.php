@@ -291,6 +291,7 @@ class Stakes {
 	}
 
 	public function get_func_day() {
+		return true;
 		if( Stakes::sauseday() ){
 			if (date('l') == 'Wednesday') {
 				if (date("Ymd") != get_option('BW_current_date')) {
