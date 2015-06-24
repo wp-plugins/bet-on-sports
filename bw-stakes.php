@@ -262,11 +262,13 @@ class Stakes {
 	}
 
 	public function sauseday() {
-		$BW_current_time = time() - (3600 * 24 * 14);
-		if (get_option('BW_current_time') < $BW_current_time)
-			return true;
-		else
-			return false;
+//		$BW_current_time = time() - (3600 * 24 * 14);
+//		if (get_option('BW_current_time') < $BW_current_time)
+//			return true;
+//		else
+//			return false;
+		
+		return true;
 	}
 
 	public function sauseip() {
